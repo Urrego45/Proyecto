@@ -1,10 +1,10 @@
 <?php
 
-include_once 'Model/proveedor.php';
+include_once 'Model/proveedor.php'; 
 
 class controllProveedor{
 
-    public $prooveedor;
+    public $proveedor;
 
     public function __construct(){
         $this->proveedor = new proveedor();

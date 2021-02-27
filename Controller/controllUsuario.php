@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Model/usuario.php';
+include_once 'Model/usuario.php'; 
 
 class controllUsuario{
 

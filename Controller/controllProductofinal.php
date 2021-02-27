@@ -1,6 +1,6 @@
 <?php
 
-include 'Model/productofinal.php';
+include 'Model/productofinal.php'; 
 
 class controllProductofinal{
 

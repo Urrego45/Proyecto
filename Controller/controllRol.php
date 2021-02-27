@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Model/rol.php';
+include_once 'Model/rol.php'; 
 
 class controllRol{
     

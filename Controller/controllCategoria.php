@@ -2,7 +2,7 @@
 
 include_once 'Modelo/categoria.php';
 
-class controlCategoria{
+class controllCategoria{
 
     public $categoria;
 
