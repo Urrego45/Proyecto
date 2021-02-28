@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Modelo/categoria.php';
+include_once 'Model/categoria.php';
 
 class controllCategoria{
 
