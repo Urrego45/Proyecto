@@ -8,6 +8,7 @@ include_once 'Controller/controllProveedor.php';
 include_once 'Controller/controllRol.php';
 include_once 'Controller/controllUsuario.php';
 include_once 'Controller/controllViews.php';
+include_once 'Controller/login.php';
 
 include_once 'Config/conexion.php';
 
@@ -20,6 +21,7 @@ $rol = new controllRol();
 $usuario = new controllUsuario();
 
 $vistas = new controllVistas();
+$login = new login();
 
 if(isset($_REQUEST['c'])){  // CATEGORIA
 
@@ -59,8 +61,12 @@ if(isset($_REQUEST['c'])){  // CATEGORIA
 }elseif(isset($_REQUEST['v'])){ // VISTAS
     
     $action = $_REQUEST['v'];
-    call_user_func(array($usuario,$action));
+    call_user_func(array($vistas,$action));
 
+}elseif(isset($_REQUEST['l'])){ // LOGIN
+    
+    $action = $_REQUEST['l'];
+    call_user_func(array($login,$action));
 }else{
     $vistas->index();
 }
