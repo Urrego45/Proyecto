@@ -5,29 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/crearUser.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
 </head>
 <body>
     <div class="container register">
         <div class="row">
-            <div class="col-md-3 register-left">
-                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                    <h3>Welcome</h3>
-                    <p>You are 30 seconds away from earning your own money!</p>
-                    <input type="submit" name="" value="Login"/><br/>
-                </div>
             <div class="col-md-9 register-right">
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Empleado</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Sub Admin</a>
                     </li>
                 </ul>
+            </div>
+            <!-- Inicio Primer Form -->
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3 class="register-heading">Apply as a Employee</h3>
+                    <h3 class="register-heading">Registrar Empleado </h3>
                     <div class="row register-form">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -77,6 +74,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fin Primer Form -->
+                <!-- Inicio Segundo Form -->
                 <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <h3  class="register-heading">Apply as a Hirer</h3>
                     <div class="row register-form">
@@ -115,7 +114,6 @@
                             <input type="submit" class="btnRegister"  value="Register"/>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
