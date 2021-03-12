@@ -8,115 +8,39 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Document</title>
 </head>
+
+<body>    
 <body>
-    <div class="container register">
-        <div class="row">
-            <div class="col-md-9 register-right">
-                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Empleado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Sub Admin</a>
-                    </li>
-                </ul>
+
+    <div class="container bg-primary">
+        <div class="">
+            <div class="">
+                <h2>Registrar usuario</h2>
             </div>
-            <!-- Inicio Primer Form -->
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3 class="register-heading">Registrar Empleado </h3>
-                    <div class="row register-form">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <div class="maxl">
-                                    <label class="radio inline"> 
-                                        <input type="radio" name="gender" value="male" checked>
-                                        <span> Male </span> 
-                                    </label>
-                                    <label class="radio inline"> 
-                                        <input type="radio" name="gender" value="female">
-                                        <span>Female </span> 
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                    <option>What is your Birthdate?</option>
-                                    <option>What is Your old Phone Number</option>
-                                    <option>What is your Pet Name?</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
-                            </div>
-                            <input type="submit" class="btnRegister"  value="Register"/>
-                        </div>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col m-3">
+                        <input type="text" name="" id="" class="form-control m-1" placeholder="Usuario">
+                        <input type="text" class="form-control m-1" placeholder="Apellido">
+                        <input type="tel" name="" id="" class="form-control m-1" placeholder="Telefono">
+                        <input type="email" name="" id="" class="form-control m-1" placeholder="Email">
+                    </div>
+                    <div class="col m-3">
+                        <input type="password" name="" id="" class="form-control m-1" placeholder="PAss">
+                        <select name="" id="" class="form-control m-1">
+                            <option value="">1</option>
+                        </select >
+                        <select name="" id="" class="form-control m-1">
+                            <option value="">2</option>
+                        </select>
                     </div>
                 </div>
-                <!-- Fin Primer Form -->
-                <!-- Inicio Segundo Form -->
-                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <h3  class="register-heading">Apply as a Hirer</h3>
-                    <div class="row register-form">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                    <option>What is your Birthdate?</option>
-                                    <option>What is Your old Phone Number</option>
-                                    <option>What is your Pet Name?</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="`Answer *" value="" />
-                            </div>
-                            <input type="submit" class="btnRegister"  value="Register"/>
-                        </div>
-                    </div>
+                <div class="col m-3">
+                    <input type="submit" value="Registrar" class="btn btn-danger m-2">
                 </div>
-            </div>
+            </form>
         </div>
     </div>
+
 </body>
 </html>
