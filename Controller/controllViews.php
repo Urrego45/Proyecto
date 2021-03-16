@@ -1,57 +1,26 @@
 <?php
 
-include_once 'Model/categoria.php';
-include_once 'Model/insumo.php';
-include_once 'Model/insumoprodf.php';
-include_once 'Model/productofinal.php';
-include_once 'Model/proveedor.php';
-include_once 'Model/rol.php';
-include_once 'Model/usuario.php';
 
 
 
 class controllVistas{
 
-    public $categoria;
-    public $insumo;
-    public $insumoprodf;
-    public $productof;
-    public $proveedor;
-    public $rol;
-    public $usuario;
+    public $viewPath = 'C:\xampp\htdocs\Emi\Views';
+    public $layout;
 
     public function __construct(){
-
-        $this->categoria = new categoria();
-        $this->insumo = new insumo();            
-        $this->insumoprodf = new insumoproductof();
-        $this->productof = new productofinal();
-        $this->proveedor = new proveedor();
-        $this->rol = new rol();
-        $this->usuario = new usuario();
+        $this->layout = $this->viewPath.'\Layout\layout.php';
 
     }
 
-    //  INICIO
 
 
     public function index(){
-        include_once 'Views/login.php';
+        $pageTitle = 'Login';
+        $body = $this->viewPath.'\login.php';
+
+        include_once $this->layout;
     }
-
-    // -----------------
-    
-    //  ADMIN
-
-    public function admin(){
-        include_once 'Views/Admin/index.php';
-    }
-
-    public function crear(){
-        include_once 'Views/Admin/crear.php';
-    }
-
-    //-----------
 
 
 }

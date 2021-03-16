@@ -32,10 +32,7 @@
                     <div class="col m-3">
                         <input type="password" name="" id="" class="form-control m-1" placeholder="PAss">
                         <select name="rol" id="" class="form-control m-1">
-                            <?php foreach ($this->usuario->cargarUsuario() as $td): ?>
-                                <?php echo $td ?>
-                                <option value="<?php echo $td->idRol ?>"><?php echo $td->rol ?></option>
-                            <?php endforeach; ?>
+                            <option value="">Inbgresefasd</option>
                         </select>
                     </div>
                 </div>
