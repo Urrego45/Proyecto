@@ -21,6 +21,16 @@ class usuario{
         }
     }
 
+    public function listar(){
+        try {
+            $query = "SELECT * FROM usuario";
+            $smt = $this->CNX->prepare($query);
+            $smt->execute();
+            return $smt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage);
+        }
+    }
 
 
 

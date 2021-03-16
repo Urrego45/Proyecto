@@ -9,6 +9,10 @@ class controllRol{
     public function __construct(){
         $this->rol = new rol();
     }
+
+
+
+
 }
 
 ?>

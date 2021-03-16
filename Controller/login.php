@@ -41,7 +41,7 @@ class login{
 
                     if($_SESSION['idRol'] == 1){
                         session_start();
-                        /* header('location: index.php?v=admin'); */
+                        header('location: index.php?v=admin');
                         echo 'admin';
                     }elseif($_SESSION['idRol'] == 2){
                         session_start();

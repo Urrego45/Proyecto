@@ -32,9 +32,26 @@ class controllVistas{
 
     }
 
+    //  INICIO
+
+
     public function index(){
         include_once 'Views/login.php';
     }
+
+    // -----------------
+    
+    //  ADMIN
+
+    public function admin(){
+        include_once 'Views/Admin/index.php';
+    }
+
+    public function crear(){
+        include_once 'Views/Admin/crear.php';
+    }
+
+    //-----------
 
 
 }
