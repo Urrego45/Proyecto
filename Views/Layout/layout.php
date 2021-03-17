@@ -40,20 +40,22 @@
             <hr class="border border-white">
 
             <ul class="navbar-nav" id="leftNav">
+
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)"> &xrarr; Home</a>
+                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)"> &xrarr;  Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="?v=listar" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Usuarios</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Products</a>
+                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Reportes</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Reports</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Info</a>
+                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Informacion</a>
                 </li>
 
             </ul>
@@ -62,7 +64,7 @@
 
         <div class="w-80 float-right">
 
-            <?php include $body; ?>
+            <?php include $body; /* &xrarr; */  ?>
 
         </div>
 

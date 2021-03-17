@@ -16,6 +16,8 @@ class controllUsuario{
         $alm = new usuario();
     }
 
+    
+    
 
 }
 
