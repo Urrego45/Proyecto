@@ -8,15 +8,17 @@
                 <form action="?u=crear" method="post">
                     <div class="row">
                         <div class="col m-3">
-                            <input type="text" name="" id="" class="form-control m-1" placeholder="Usuario">
-                            <input type="text" name="" class="form-control m-1" placeholder="Apellido">
-                            <input type="tel" name="" id="" class="form-control m-1" placeholder="Telefono">
-                            <input type="email" name="" id="" class="form-control m-1" placeholder="Email">
+                            <input type="text" name="nombre" id="" class="form-control m-1" placeholder="Nombre">
+                            <input type="text" name="apellido" class="form-control m-1" placeholder="Apellido">
+                            <input type="number" name="telefono" id="" class="form-control m-1" placeholder="Telefono">
+                            <input type="email" name="email" id="" class="form-control m-1" placeholder="Email">
                         </div>
                         <div class="col m-3">
-                            <input type="password" name="" id="" class="form-control m-1" placeholder="PAss">
+                            <input type="password" name="pass" id="" class="form-control m-1" placeholder="PAss">
                             <select name="rol" id="" class="form-control m-1">
-                                <option value="">Inbgresefasd</option>
+                                <?php foreach($this->usuario->listarRol() as $td): ?>
+                                <option value="<?php echo $td->idRol ?>"> <?php echo $td->rol ?> </option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>

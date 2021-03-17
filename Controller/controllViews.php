@@ -45,11 +45,17 @@ class controllVistas{
         include_once $this->layout;
     }
 
-    
-
     public function listar(){
         $pageTitle = 'Inicio';
         $body = $this->viewPath.'\Admin\listar.php';
+        
+
+        include_once $this->layout;
+    }
+
+    public function crear(){
+        $pageTitle = 'Crear';
+        $body = $this->viewPath.'\Admin\crear.php';
         
 
         include_once $this->layout;

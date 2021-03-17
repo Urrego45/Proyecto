@@ -28,7 +28,34 @@ class usuario{
             $smt->execute();
             return $smt->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {
-            die($e->getMessage);
+            die($e->getMessage());
+        }
+    }
+
+    public function listarRol(){
+        try {
+            $query = "SELECT * FROM rol";
+            $smt = $this->CNX->prepare($query);
+            $smt->execute();
+            return $smt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function registrar(usuario $data){
+        try {
+            $query = "INSERT INTO usuario (idRol,nombres,apellidos,telefono,email,clave,estado)
+                    VALUES (?,?,?,?,?,?,2)";
+            $this->CNX->prepare($query)->execute(array(
+                $data->idRol,
+                $data->nombres,
+                $data->apellidos,
+                $data->telefono,
+                $data->email,
+                $data->clave));
+        } catch (Exception $e) {
+            die($e->getMessage());
         }
     }
 

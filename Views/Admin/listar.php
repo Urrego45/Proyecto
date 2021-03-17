@@ -28,7 +28,7 @@
                     <td><?php echo $ac->clave; ?></td>
                     <td><?php echo $ac->estado; ?></td>
                     <td>
-
+                        <a href=""></a>
                     </td>
                 </tr>
             <?php endforeach; ?>
