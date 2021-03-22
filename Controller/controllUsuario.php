@@ -14,17 +14,20 @@ class controllUsuario{
 
     public function crear(){
         $alm = new usuario();
-
+        $alm->idUsuario = $_POST['idU'];
         $alm->nombres = $_POST['nombre'];
         $alm->apellidos = $_POST['apellido'];
         $alm->telefono = $_POST['telefono'];
         $alm->email = $_POST['email'];
         $alm->clave = $_POST['pass'];
         $alm->idRol = $_POST['rol'];
+        $alm->estado = $_POST['estado'];
 
-        $this->usuario->registrar($alm);
+        $alm->idUsuario > 0 ? $this->usuario->editar($alm) : $this->usuario->registrar($alm);
         header("Location: index.php?v=listar");
     }
+
+    
 
     
     

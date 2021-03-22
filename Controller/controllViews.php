@@ -61,6 +61,18 @@ class controllVistas{
         include_once $this->layout;
     }
 
+    public function editar(){
+        $alm = new usuario();
+        if(isset($_REQUEST['id'])){
+            $alm = $this->usuario->cargarID($_REQUEST['id']);
+        }
+        $pageTitle = 'Editar';
+        $body = $this->viewPath.'\Admin\editar.php';
+        
+
+        include_once $this->layout;
+    }
+
 
 }
 

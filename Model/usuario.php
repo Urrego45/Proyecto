@@ -59,6 +59,34 @@ class usuario{
         }
     }
 
+    public function cargarID($id){
+        try {
+            $query = "SELECT * FROM usuario where idUsuario=?";
+            $smt = $this->CNX->prepare($query);
+            $smt->execute(array($id));
+            return $smt->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function editar($data){
+        try {
+            $query = "UPDATE usuario SET idRol=?,nombres=?,apellidos=?,telefono=?,email=?,clave=?,estado=?
+                        WHERE idUsuario=?";
+            $this->CNX->prepare($query)->execute(array(
+                $data->idRol,
+                $data->nombres,
+                $data->apellidos,
+                $data->telefono,
+                $data->email,
+                $data->clave,
+                $data->estado,
+                $data->idUsuario));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
 
 }

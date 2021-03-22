@@ -2,8 +2,8 @@
     <div class="card-header bg-light p-5">
         <table>
             <thead>
-                <tr>
-                    <th> <a href="?v=crear" class="btn btn-primary" value="">Crear nuevo usuario</a> </th>
+                <tr >
+                    <th colspan="9"> <center> <a href="?v=crear" class="btn btn-primary" value="">Crear nuevo usuario </a></center> </th>
                 </tr>
                 <tr>
                     <th>Id Usuario</th>
@@ -28,7 +28,7 @@
                     <td><?php echo $ac->clave; ?></td>
                     <td><?php echo $ac->estado; ?></td>
                     <td>
-                        <a href=""></a>
+                        <a href="?v=editar&id=<?php echo $ac->idUsuario; ?>" class="btn btn-block btn-danger">Editar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
