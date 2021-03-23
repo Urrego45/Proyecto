@@ -41,15 +41,15 @@ class login{
 
                     if($_SESSION['idRol'] == 1){
                         session_start();
-                        header('location: index.php?v=admin');
+                        header('location: index.php?v=inicioA');
                         echo 'admin';
                     }elseif($_SESSION['idRol'] == 2){
                         session_start();
-                        /* header('location: index.php?v=sub'); */
+                        header('location: index.php?v=inicioS');
                         echo 'sub';
                     }elseif($_SESSION['idRol'] == 3){
                         session_start();
-                        /* header('location: index.php?v=empleado'); */
+                        header('location: index.php?v=inicioE');
                         echo 'empleado';
                     }
                 }
@@ -59,6 +59,11 @@ class login{
         }
     }
 
+    public function cerrarSesion(){
+        session_start();
+        session_destroy();
+        header('location: index.php?v=index');
+    }
 
 }
 

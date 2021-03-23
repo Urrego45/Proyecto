@@ -19,7 +19,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link  px-2 rounded linkDark2Hover" href="#"> LogOut </a>
+                    <a class="nav-link  px-2 rounded linkDark2Hover" href="?l=cerrarSesion"> LogOut </a>
 
                 </li>
 

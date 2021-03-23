@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://localhost/Emi/assets/css/main.css">
-    <title> Dashboard Emi - <?=$pageTitle?> </title>
+    <title> Sub Admin Inicio - <?=$pageTitle?> </title>
 </head>
 <body>
         
@@ -13,13 +13,13 @@
 
         <nav class="navbar fixed-top navbar-dark bg-dark">
 
-            <a class="navbar-brand" href="#">Dashboard - EMI</a>
+            <a class="navbar-brand" href="?v=inicioS">Sub Admin - EMI</a>
 
             <ul class="navbar-nav">
 
                 <li class="nav-item">
 
-                    <a class="nav-link  px-2 rounded linkDark2Hover" href="#"> LogOut </a>
+                    <a class="nav-link  px-2 rounded linkDark2Hover" href="?l=cerrarSesion"> LogOut </a>
 
                 </li>
 
@@ -41,11 +41,11 @@
 
             <ul class="navbar-nav" id="leftNav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)"> &xrarr; Home</a>
+                    <a href="?v=inicioS" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)"> &xrarr; Inicio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Products</a>
+                    <a href="?v=listarPS" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Proveedores</a>
                 </li>
 
                 <li class="nav-item">
