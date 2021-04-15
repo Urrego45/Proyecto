@@ -49,11 +49,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Reports</a>
+                    <a href="?v=listarIS" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Insumos</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Info</a>
+                    <a href="?v=listarPrS" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Productos finales</a>
                 </li>
 
             </ul>

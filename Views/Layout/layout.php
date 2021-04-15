@@ -55,8 +55,13 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Informacion</a>
+                    <a href="?v=listarI" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Insumos</a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="?v=listarPr" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Productos Finales</a>
+                </li>
+
 
             </ul>
 

@@ -10,6 +10,8 @@ class controllInsumoprodf{
         $this->insumoprodf = new insumoproductof();
     }
 
+    
+
 }
 
 ?>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://localhost/Emi/assets/css/main.css">
-    <title> Dashboard Emi - <?=$pageTitle?> </title>
+    <title> Empleado Emi - <?=$pageTitle?> </title>
 </head>
 <body>
         
@@ -13,7 +13,7 @@
 
         <nav class="navbar fixed-top navbar-dark bg-dark">
 
-            <a class="navbar-brand" href="#">Dashboard - EMI</a>
+            <a class="navbar-brand" href="#">Empleado - EMI</a>
 
             <ul class="navbar-nav">
 
@@ -45,15 +45,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Products</a>
+                    <a href="?v=listarIE" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Insumo</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Reports</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Info</a>
+                    <a href="?v=listarPrE" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">Productos finales</a>
                 </li>
 
             </ul>

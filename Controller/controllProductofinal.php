@@ -10,6 +10,24 @@ class controllProductofinal{
         $this->productof = new productofinal();
     }
 
+    public function crear(){
+        $alm = new productofinal();
+        $alm->idProductoFinal = $_POST['idU'];
+        
+        $alm->nombre = $_POST['nombre'];
+        $alm->precio = $_POST['precio'];
+        $alm->ventas = $_POST['ventas'];
+        $alm->estado = $_POST['estado'];
+
+        $alm->idProductoFinal > 0 ? $this->productof->editar($alm) : $this->productof->registrar($alm);
+
+        if(isset($_POST['ad'])){
+            header("Location: index.php?v=listarPr");
+        }else{
+            header("Location: index.php?v=listarPrS");
+        }
+    }
+
 }
 
 ?>

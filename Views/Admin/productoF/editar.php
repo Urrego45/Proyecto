@@ -3,17 +3,17 @@
         <div class="container bg-primary">
             <div class="">
                 <div class="">
-                    <h2>Editar proveedor</h2>
+                    <h2>Editar Producto</h2>
                 </div>
-                <form action="?p=crear" method="post">
+                <form action="?pf=crear" method="post">
                     <div class="row">
                         <div class="col m-3">
-                            <input type="hidden" name="idU" value="<?php echo $alm->idProveedor; ?>">
+                            <input type="hidden" name="ad">
+                            <input type="hidden" name="idU" value="<?php echo $alm->idProductoFinal; ?>">
 
-                            <input type="text" name="nombre" id="" class="form-control m-1" placeholder="Nombre proveedor" value="<?php echo $alm->nombreProveedor; ?>">
-                            <input type="text" name="direccion" class="form-control m-1" placeholder="Direccion" value="<?php echo $alm->direccion; ?>">
-                            <input type="number" name="telefono" id="" class="form-control m-1" placeholder="Telefono" value="<?php echo $alm->telefono; ?>">
-                            <input type="email" name="email" id="" class="form-control m-1" placeholder="Email" value="<?php echo $alm->email; ?>">
+                            <input type="text" name="nombre" id="" class="form-control m-1" placeholder="Nombre insumo" value="<?php echo $alm->nombre; ?>">
+                            <input type="number" name="precio" class="form-control m-1" placeholder="Precio" value="<?php echo $alm->precio; ?>">
+                            <input type="number" name="ventas" id="" class="form-control m-1" placeholder="ventas" value="<?php echo $alm->ventas; ?>">
                             <select name="estado" id="" class="form-control m-1">
                                 <option value="0">inactivo</option>
                                 <option value="1">activo</option>

@@ -17,6 +17,8 @@ class controllVistas{
 
         $this->usuario = new usuario();
         $this->proveedor = new proveedor();
+        $this->insumo = new insumo();
+        $this->productof = new productofinal();
 
         $this->layout = $this->viewPath.'\Layout\layout.php';
         $this->layoutBl = $this->viewPath.'\Layout\layoutBl.php';
@@ -108,6 +110,66 @@ class controllVistas{
         include_once $this->layout;
     }
 
+    /* --- Insumos --- */
+
+    public function listarI(){
+        $pageTitle = 'Insumos';
+        $body = $this->viewPath.'\Admin\insumos\listar.php';
+        
+
+        include_once $this->layout;
+    }
+
+    public function crearI(){
+        $pageTitle = 'Nuevo insumo';
+        $body = $this->viewPath.'\Admin\insumos\crear.php';
+        
+
+        include_once $this->layout;
+    }
+
+    public function editarI(){
+        $alm = new insumo();
+        if(isset($_REQUEST['id'])){
+            $alm = $this->insumo->cargarID($_REQUEST['id']);
+        }
+        $pageTitle = 'Editar Insumo';
+        $body = $this->viewPath.'\Admin\insumos\editar.php';
+        
+
+        include_once $this->layout;
+    }
+
+    /* --- Producto Final --- */
+
+    public function listarPr(){
+        $pageTitle = 'Producto final';
+        $body = $this->viewPath.'\Admin\productoF\listar.php';
+        
+
+        include_once $this->layout;
+    }
+
+    public function crearPr(){
+        $pageTitle = 'Nuevo Producrto';
+        $body = $this->viewPath.'\Admin\productoF\crear.php';
+        
+
+        include_once $this->layout;
+    }
+
+    public function editarPr(){
+        $alm = new productofinal();
+        if(isset($_REQUEST['id'])){
+            $alm = $this->productof->cargarID($_REQUEST['id']);
+        }
+        $pageTitle = 'Editar Producto';
+        $body = $this->viewPath.'\Admin\productoF\editar.php';
+        
+
+        include_once $this->layout;
+    }
+
     /* ------------- Sub-Admin --------------- */
 
     public function inicioS(){
@@ -128,7 +190,69 @@ class controllVistas{
         include_once $this->layoutSub;
     }
 
+    /* --- Insumos --- */
 
+    public function listarIS(){
+        $pageTitle = 'Insumos';
+        $body = $this->viewPath.'\SubAdmin\insumos\listar.php';
+        
+
+        include_once $this->layoutSub;
+    }
+
+    public function crearIS(){
+        $pageTitle = 'Nuevo insumo';
+        $body = $this->viewPath.'\SubAdmin\insumos\crear.php';
+        
+
+        include_once $this->layoutSub;
+    }
+
+    public function editarIS(){
+        $alm = new insumo();
+        if(isset($_REQUEST['id'])){
+            $alm = $this->insumo->cargarID($_REQUEST['id']);
+        }
+        $pageTitle = 'Editar Insumo';
+        $body = $this->viewPath.'\SubAdmin\insumos\editar.php';
+        
+
+        include_once $this->layoutSub;
+    }
+
+    /* --- Producto Final --- */
+
+    public function listarPrS(){
+        $pageTitle = 'Producto final';
+        $body = $this->viewPath.'\SubAdmin\productoF\listar.php';
+        
+
+        include_once $this->layoutSub;
+    }
+
+    public function crearPrS(){
+        $pageTitle = 'Nuevo Producrto';
+        $body = $this->viewPath.'\SubAdmin\productoF\crear.php';
+        
+
+        include_once $this->layoutSub;
+    }
+
+    public function editarPrS(){
+        $alm = new productofinal();
+        if(isset($_REQUEST['id'])){
+            $alm = $this->productof->cargarID($_REQUEST['id']);
+        }
+        $pageTitle = 'Editar Producto';
+        $body = $this->viewPath.'\SubAdmin\productoF\editar.php';
+        
+
+        include_once $this->layoutSub;
+    }
+
+    
+
+    
     /* ------------- Empleado --------------- */
 
     public function inicioE(){
@@ -136,8 +260,29 @@ class controllVistas{
         $body = $this->viewPath.'\Empleado\index.php';
         
 
-        include_once $this->layoutSub;
+        include_once $this->layoutEmp;
     }
+
+    /* --- Insumos --- */
+
+    public function listarIE(){
+        $pageTitle = 'Insumos';
+        $body = $this->viewPath.'\Empleado\insumos\listar.php';
+        
+
+        include_once $this->layoutEmp;
+    }
+
+    /* --- Producto Final --- */
+
+    public function listarPrE(){
+        $pageTitle = 'Producto final';
+        $body = $this->viewPath.'\Empleado\productoF\listar.php';
+        
+
+        include_once $this->layoutEmp;
+    }
+
 }
 
 
