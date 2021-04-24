@@ -21,7 +21,7 @@ class usuario{
         }
     }
 
-    public function listar(){
+    public function listar(){ 
         try {
             $query = "SELECT * FROM usuario";
             $smt = $this->CNX->prepare($query);

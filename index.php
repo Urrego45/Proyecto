@@ -1,6 +1,5 @@
 <?php
 
-include_once 'Controller/controllCategoria.php';
 include_once 'Controller/controllInsumo.php';
 include_once 'Controller/controllInsumoprodf.php';
 include_once 'Controller/controllProductofinal.php';
@@ -9,10 +8,10 @@ include_once 'Controller/controllRol.php';
 include_once 'Controller/controllUsuario.php';
 include_once 'Controller/controllViews.php';
 include_once 'Controller/login.php';
+include_once 'Controller/controllInformes.php';
 
 include_once 'Config/conexion.php';
 
-$categoria = new controllCategoria();
 $insumo = new controllInsumo();
 $insumoprodf = new controllInsumoprodf();
 $productof = new controllProductofinal();
@@ -23,12 +22,9 @@ $usuario = new controllUsuario();
 $vistas = new controllVistas();
 $login = new login();
 
-if(isset($_REQUEST['c'])){  // CATEGORIA
+$informe = new controllInformes();
 
-    $action = $_REQUEST['c'];
-    call_user_func(array($categoria,$action));
-
-}elseif(isset($_REQUEST['i'])){ // INSUMO
+if(isset($_REQUEST['i'])){ // INSUMO
 
     $action = $_REQUEST['i'];
     call_user_func(array($insumo,$action));
@@ -67,6 +63,10 @@ if(isset($_REQUEST['c'])){  // CATEGORIA
     
     $action = $_REQUEST['l'];
     call_user_func(array($login,$action));
+}elseif(isset($_REQUEST['in'])){ // Informes
+    
+    $action = $_REQUEST['in'];
+    call_user_func(array($informe,$action));
 }else{
     $vistas->index();
 }

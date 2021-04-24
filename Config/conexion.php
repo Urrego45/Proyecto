@@ -1,6 +1,6 @@
 <?php 
 
-class conexion{
+class conexion{ 
 
     public static function conectar(){
         $pdo = new PDO("mysql:host=localhost;dbname=emi","root","");
