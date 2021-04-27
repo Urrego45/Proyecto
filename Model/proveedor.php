@@ -10,6 +10,7 @@ class proveedor{
     public $telefono;
     public $email;
     public $estado;
+    public $fechaRegistro;
 
     public function __construct(){
         try {
@@ -32,13 +33,14 @@ class proveedor{
 
     public function registrar(proveedor $data){
         try {
-            $query = "INSERT INTO proveedor (nombreProveedor,direccion,telefono,email,estado)
-                    VALUES (?,?,?,?,1)";
+            $query = "INSERT INTO proveedor (nombreProveedor,direccion,telefono,email,estado,FechaRegistro)
+                    VALUES (?,?,?,?,1,?)";
             $this->CNX->prepare($query)->execute(array(
                 $data->nombreProveedor,
                 $data->direccion,
                 $data->telefono,
-                $data->email));
+                $data->email,
+                $data->fechaRegistro));
         } catch (Exception $e) {
             die($e->getMessage());
         }

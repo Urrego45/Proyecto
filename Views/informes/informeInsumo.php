@@ -12,7 +12,7 @@ class PDF extends FPDF
     // Cabecera de página
     function Header(){
         // Arial bold 15
-        $this->SetFont('Arial','B',11);
+        $this->SetFont('Arial','B',10);
         // Movernos a la derecha
         $this->Cell(60);
         // Título
@@ -28,14 +28,15 @@ class PDF extends FPDF
 
         $this->Cell(9, 10, 'Id', 1, 0, 'C', 0);
         $this->Cell(11, 10, 'Proveedor', 1, 0, 'C', 0);
-        $this->Cell(20, 10, 'Nombre', 1, 0, 'C', 0);
-        $this->Cell(20, 10, 'Precio', 1, 0, 'C', 0);
-        $this->Cell(25, 10, 'Vencimiento', 1, 0, 'C', 0);
+        $this->Cell(18, 10, 'Nombre', 1, 0, 'C', 0);
+        $this->Cell(18, 10, 'Precio', 1, 0, 'C', 0);
+        $this->Cell(23, 10, 'Vencimiento', 1, 0, 'C', 0);
         $this->Cell(25, 10, 'Stock Inicial', 1, 0, 'C', 0);
-        $this->Cell(20, 10, 'Stock', 1, 0, 'C', 0);
-        $this->Cell(20, 10, 'Entradas', 1, 0, 'C', 0);
-        $this->Cell(20, 10, 'perdidas', 1, 0, 'C', 0);
-        $this->Cell(20, 10, 'Estado', 1, 1, 'C', 0);
+        $this->Cell(18, 10, 'Stock', 1, 0, 'C', 0);
+        $this->Cell(18, 10, 'Entradas', 1, 0, 'C', 0);
+        $this->Cell(18, 10, 'perdidas', 1, 0, 'C', 0);
+        $this->Cell(18, 10, 'Estado', 1, 0, 'C', 0);
+        $this->Cell(20, 10, 'Fecha', 1, 1, 'C', 0);
 
     }
 
@@ -57,7 +58,7 @@ $CNX = conexion::conectar();
 
 if($_SESSION['tiempo'] == 1){
 
-    $query = "SELECT * FROM insumo";
+    $query = "SELECT * FROM `insumo` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 24 HOUR)";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -65,25 +66,27 @@ if($_SESSION['tiempo'] == 1){
     $pdf = new PDF();
     $pdf->AliasNbPages();
     $pdf->AddPage();
-    $pdf->SetFont('Arial','',7);
+    $pdf->SetFont('Arial','',6);
     
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
         $pdf->Cell(9, 10, $row['idInsumo'], 1, 0, 'C', 0);
         $pdf->Cell(11, 10, $row['idProveedor'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['nombre'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(25, 10, $row['vencimiento'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['nombre'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['precio'], 1, 0, 'C', 0);
+        $pdf->Cell(23, 10, $row['vencimiento'], 1, 0, 'C', 0);
         $pdf->Cell(25, 10, $row['stockInicial'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['stock'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['entradas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['perdidas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['estado'], 1, 1, 'C', 0);
+        $pdf->Cell(18, 10, $row['stock'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['entradas'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['perdidas'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['estado'], 1, 0, 'C', 0);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
+
     }
     
     $pdf->Output(); 
 
 }elseif ($_SESSION['tiempo'] == 2) {
-    $query = "SELECT * FROM insumo";
+    $query = "SELECT * FROM `insumo` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 7 DAY )";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -97,19 +100,20 @@ if($_SESSION['tiempo'] == 1){
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
         $pdf->Cell(9, 10, $row['idInsumo'], 1, 0, 'C', 0);
         $pdf->Cell(11, 10, $row['idProveedor'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['nombre'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(25, 10, $row['vencimiento'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['nombre'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['precio'], 1, 0, 'C', 0);
+        $pdf->Cell(23, 10, $row['vencimiento'], 1, 0, 'C', 0);
         $pdf->Cell(25, 10, $row['stockInicial'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['stock'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['entradas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['perdidas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['estado'], 1, 1, 'C', 0);
+        $pdf->Cell(18, 10, $row['stock'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['entradas'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['perdidas'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['estado'], 1, 0, 'C', 0);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
     
     $pdf->Output(); 
 }else{
-    $query = "SELECT * FROM insumo";
+    $query = "SELECT * FROM `insumo` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH )";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -123,14 +127,15 @@ if($_SESSION['tiempo'] == 1){
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
         $pdf->Cell(9, 10, $row['idInsumo'], 1, 0, 'C', 0);
         $pdf->Cell(11, 10, $row['idProveedor'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['nombre'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(25, 10, $row['vencimiento'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['nombre'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['precio'], 1, 0, 'C', 0);
+        $pdf->Cell(23, 10, $row['vencimiento'], 1, 0, 'C', 0);
         $pdf->Cell(25, 10, $row['stockInicial'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['stock'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['entradas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['perdidas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['estado'], 1, 1, 'C', 0);
+        $pdf->Cell(18, 10, $row['stock'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['entradas'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['perdidas'], 1, 0, 'C', 0);
+        $pdf->Cell(18, 10, $row['estado'], 1, 0, 'C', 0);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
 
     $pdf->Output(); 

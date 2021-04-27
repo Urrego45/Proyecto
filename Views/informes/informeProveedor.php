@@ -28,10 +28,11 @@ class PDF extends FPDF
 
         $this->Cell(9, 10, 'Id', 1, 0, 'C', 0);
         $this->Cell(28, 10, 'Nombre', 1, 0, 'C', 0);
-        $this->Cell(33, 10, 'Direccion', 1, 0, 'C', 0);
-        $this->Cell(33, 10, 'Telefono', 1, 0, 'C', 0);
+        $this->Cell(30, 10, 'Direccion', 1, 0, 'C', 0);
+        $this->Cell(30, 10, 'Telefono', 1, 0, 'C', 0);
         $this->Cell(50, 10, 'Email', 1, 0, 'C', 0);
-        $this->Cell(28, 10, 'Estado', 1, 1, 'C', 0);
+        $this->Cell(25, 10, 'Estado', 1, 0, 'C', 0);
+        $this->Cell(20, 10, 'Estado', 1, 1, 'C', 0);
 
     }
 
@@ -53,7 +54,7 @@ $CNX = conexion::conectar();
 
 if($_SESSION['tiempo'] == 1){
 
-    $query = "SELECT * FROM proveedor";
+    $query = "SELECT * FROM `proveedor` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 24 HOUR)";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -66,16 +67,17 @@ if($_SESSION['tiempo'] == 1){
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
         $pdf->Cell(9, 10, $row['idProveedor'], 1, 0, 'C', 0);
         $pdf->Cell(28, 10, $row['nombreProveedor'], 1, 0, 'C', 0);
-        $pdf->Cell(33, 10, $row['direccion'], 1, 0, 'C', 0);
-        $pdf->Cell(33, 10, $row['telefono'], 1, 0, 'C', 0);
+        $pdf->Cell(30, 10, $row['direccion'], 1, 0, 'C', 0);
+        $pdf->Cell(30, 10, $row['telefono'], 1, 0, 'C', 0);
         $pdf->Cell(50, 10, $row['email'], 1, 0, 'C', 0);
-        $pdf->Cell(28, 10, $row['estado'], 1, 1, 'C', 0);
+        $pdf->Cell(25, 10, $row['estado'], 1, 0, 'C', 0);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
     
     $pdf->Output(); 
 
 }elseif ($_SESSION['tiempo'] == 2) {
-    $query = "SELECT * FROM proveedor";
+    $query = "SELECT * FROM `proveedor` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 7 DAY )";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -89,15 +91,16 @@ if($_SESSION['tiempo'] == 1){
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
         $pdf->Cell(9, 10, $row['idProveedor'], 1, 0, 'C', 0);
         $pdf->Cell(28, 10, $row['nombreProveedor'], 1, 0, 'C', 0);
-        $pdf->Cell(33, 10, $row['direccion'], 1, 0, 'C', 0);
-        $pdf->Cell(33, 10, $row['telefono'], 1, 0, 'C', 0);
+        $pdf->Cell(30, 10, $row['direccion'], 1, 0, 'C', 0);
+        $pdf->Cell(30, 10, $row['telefono'], 1, 0, 'C', 0);
         $pdf->Cell(50, 10, $row['email'], 1, 0, 'C', 0);
-        $pdf->Cell(28, 10, $row['estado'], 1, 1, 'C', 0);
+        $pdf->Cell(25, 10, $row['estado'], 1, 0, 'C', 0);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
     
     $pdf->Output(); 
 }else{
-    $query = "SELECT * FROM proveedor";
+    $query = "SELECT * FROM `proveedor` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH )";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -111,10 +114,11 @@ if($_SESSION['tiempo'] == 1){
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
         $pdf->Cell(9, 10, $row['idProveedor'], 1, 0, 'C', 0);
         $pdf->Cell(28, 10, $row['nombreProveedor'], 1, 0, 'C', 0);
-        $pdf->Cell(33, 10, $row['direccion'], 1, 0, 'C', 0);
-        $pdf->Cell(33, 10, $row['telefono'], 1, 0, 'C', 0);
+        $pdf->Cell(30, 10, $row['direccion'], 1, 0, 'C', 0);
+        $pdf->Cell(30, 10, $row['telefono'], 1, 0, 'C', 0);
         $pdf->Cell(50, 10, $row['email'], 1, 0, 'C', 0);
-        $pdf->Cell(28, 10, $row['estado'], 1, 1, 'C', 0);
+        $pdf->Cell(25, 10, $row['estado'], 1, 0, 'C', 0);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
 
     $pdf->Output(); 

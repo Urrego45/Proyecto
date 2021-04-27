@@ -23,6 +23,7 @@ class controllInsumo{
         $alm->entradas = $_POST['insumE'];
         $alm->perdidas = $_POST['perdidas'];
         $alm->estado = $_POST['estado'];
+        $alm->fechaRegistro = date('Y-m-d');
 
         $alm->idInsumo > 0 ? $this->insumo->editar($alm) : $this->insumo->registrar($alm);
 

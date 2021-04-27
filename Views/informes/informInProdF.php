@@ -30,13 +30,14 @@ class PDF extends FPDF
         $this->Cell(20, 10, 'Insumo', 1, 0, 'C', 0);
         $this->Cell(35, 10, 'Producto Final', 1, 0, 'C', 0);
         $this->Cell(25, 10, 'Precio', 1, 0, 'C', 0);
-        $this->Cell(25, 10, 'Cantidad', 1, 1, 'C', 0);
+        $this->Cell(25, 10, 'Cantidad', 1, 0, 'C', 0);
+        $this->Cell(25, 10, 'Fecha', 1, 1, 'C', 0);
 
     }
 
     // Pie de página
     function Footer(){
-        // Posición: a 1,5 cm del final
+        // Posición: a 1,5 cm del finalsan
         $this->SetY(-15);
         // Arial italic 8
         $this->SetFont('Arial','I',8);
@@ -52,7 +53,7 @@ $CNX = conexion::conectar();
 
 if($_SESSION['tiempo'] == 1){
 
-    $query = "SELECT * FROM insuprodf";
+    $query = "SELECT * FROM `insuprodf` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 24 HOUR)";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -67,13 +68,14 @@ if($_SESSION['tiempo'] == 1){
         $pdf->Cell(20, 10, $row['idInsumo'], 1, 0, 'C', 0);
         $pdf->Cell(35, 10, $row['idProductoFinal'], 1, 0, 'C', 0);
         $pdf->Cell(25, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(25, 10, $row['cantidad'], 1, 1, 'C', 0);
+        $pdf->Cell(25, 10, $row['cantidad'], 1, 0, 'C', 0);
+        $pdf->Cell(25, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
     
     $pdf->Output(); 
 
 }elseif ($_SESSION['tiempo'] == 2) {
-    $query = "SELECT * FROM usuario";
+    $query = "SELECT * FROM `insuprodf` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 7 DAY )";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -88,12 +90,13 @@ if($_SESSION['tiempo'] == 1){
         $pdf->Cell(20, 10, $row['idInsumo'], 1, 0, 'C', 0);
         $pdf->Cell(35, 10, $row['idProductoFinal'], 1, 0, 'C', 0);
         $pdf->Cell(25, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(25, 10, $row['cantidad'], 1, 1, 'C', 0);
+        $pdf->Cell(25, 10, $row['cantidad'], 1, 0, 'C', 0);
+        $pdf->Cell(25, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
     
     $pdf->Output(); 
 }else{
-    $query = "SELECT * FROM usuario";
+    $query = "SELECT * FROM `insuprodf` WHERE FechaRegistro >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH )";
     $smt = $CNX->prepare($query);
     $smt->execute();
     
@@ -108,7 +111,8 @@ if($_SESSION['tiempo'] == 1){
         $pdf->Cell(20, 10, $row['idInsumo'], 1, 0, 'C', 0);
         $pdf->Cell(35, 10, $row['idProductoFinal'], 1, 0, 'C', 0);
         $pdf->Cell(25, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(25, 10, $row['cantidad'], 1, 1, 'C', 0);
+        $pdf->Cell(25, 10, $row['cantidad'], 1, 0, 'C', 0);
+        $pdf->Cell(25, 10, $row['FechaRegistro'], 1, 1, 'C', 0);
     }
 
     $pdf->Output(); 

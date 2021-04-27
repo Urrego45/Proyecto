@@ -10,7 +10,7 @@ class controllProductofinal{
         $this->productof = new productofinal();
     }
 
-    public function crear(){
+    public function crear(){ 
         $alm = new productofinal();
         $alm->idProductoFinal = $_POST['idU'];
         
@@ -18,6 +18,7 @@ class controllProductofinal{
         $alm->precio = $_POST['precio'];
         $alm->ventas = $_POST['ventas'];
         $alm->estado = $_POST['estado'];
+        $alm->fechaRegistro = date('Y-m-d');
 
         $alm->idProductoFinal > 0 ? $this->productof->editar($alm) : $this->productof->registrar($alm);
 
