@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://localhost/Emi/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <title> Dashboard Emi - <?=$pageTitle?> </title>
 </head>
 <body>
@@ -13,17 +17,20 @@
 
         <nav class="navbar fixed-top navbar-dark bg-dark">
 
-            <a class="navbar-brand" href="?v=inicioA">Dashboard - EMI</a>
+            <a class="navbar-brand" href="?v=inicioA">Dashboard - EMI - <?php echo $_SESSION['nombre']; ?></a>
 
+            <a class="navbar-brand" href="?v=cambioPass">Cambiar contraseña</a>
+
+            
             <ul class="navbar-nav">
-
+                
                 <li class="nav-item">
-
-                    <a class="nav-link  px-2 rounded linkDark2Hover" href="?l=cerrarSesion"> LogOut </a>
+                    <a class="nav-link  px-2 rounded linkDark2Hover" href="?l=cerrarSesion"> Cerrar sesion </a>                    
 
                 </li>
 
             </ul>
+            
 
         </nav>
 
@@ -99,6 +106,6 @@
         }
 
     </script>
-
+    <script src="http://localhost/Emi/assets/js/validacion.js"></script>
 </body>
 </html>

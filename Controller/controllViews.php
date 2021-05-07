@@ -22,7 +22,6 @@ class controllVistas{
 
         $this->layout = $this->viewPath.'\Layout\layout.php';
         $this->layoutBl = $this->viewPath.'\Layout\layoutBl.php';
-        $this->layoutEmp = $this->viewPath.'\Layout\layoutEmp.php';
         $this->layoutSub = $this->viewPath.'\Layout\layoutSub.php';
     }
 
@@ -79,6 +78,7 @@ class controllVistas{
 
         include_once $this->layout;
     }
+
 
     /* --- proveedores --- */
 
@@ -250,38 +250,16 @@ class controllVistas{
         include_once $this->layoutSub;
     }
 
-    
 
-    
-    /* ------------- Empleado --------------- */
-
-    public function inicioE(){
-        $pageTitle = 'Inicio';
-        $body = $this->viewPath.'\Empleado\index.php';
+    public function cambioPass(){
+        $pageTitle = 'Cambiar contraseña';
+        $body = $this->viewPath.'\cambioPass.php';
         
 
-        include_once $this->layoutEmp;
+        include_once $this->layout;
     }
 
-    /* --- Insumos --- */
 
-    public function listarIE(){
-        $pageTitle = 'Insumos';
-        $body = $this->viewPath.'\Empleado\insumos\listar.php';
-        
-
-        include_once $this->layoutEmp;
-    }
-
-    /* --- Producto Final --- */
-
-    public function listarPrE(){
-        $pageTitle = 'Producto final';
-        $body = $this->viewPath.'\Empleado\productoF\listar.php';
-        
-
-        include_once $this->layoutEmp;
-    }
 
 }
 

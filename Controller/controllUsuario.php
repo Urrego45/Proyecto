@@ -27,7 +27,21 @@ class controllUsuario{
         header("Location: index.php?v=listar");
     }
 
-    
+    public function cambiarPass(){
+        $alm = new usuario();
+        $alm->idUsuario = $_POST['idU'];
+        
+        if($_POST['pass1'] == $_POST['pass2']){
+            $alm->clave = $_POST['pass2'];
+
+            $this->usuario->cambioPass($alm);
+            header("Location: index.php?v=inicioA");
+
+        }else{
+            echo 'error';
+        }
+
+    }
 
     
     

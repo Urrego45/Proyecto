@@ -88,6 +88,19 @@ class usuario{
         }
     }
 
+    public function cambioPass($data){
+        try {
+            $query = "UPDATE usuario SET clave=?
+                        WHERE idUsuario=?";
+            $this->CNX->prepare($query)->execute(array(
+                $data->clave,
+                $data->idUsuario));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
 
 }
 

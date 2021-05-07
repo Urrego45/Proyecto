@@ -33,16 +33,6 @@ class controllInformes{
 
         }
     }
-    
-    public function tiempo(){
-
-        var_dump($tiempo);
-            exit();
-        return $tiempo;
-    }
-
-
-
 
 }
 

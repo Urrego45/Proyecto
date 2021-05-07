@@ -13,16 +13,18 @@ class login{
             die($e->getMessage());
         }
     }
-
+    
     public function validar(){
+        
         if(isset($_POST['validar'])){
             if(empty($_POST['email']) || empty($_POST['pass'])){
                 echo 'ingrese';
             }else{
+                session_start();
                 $email = $_REQUEST['email'];
                 $pass = $_REQUEST['pass'];
 
-                $query = "SELECT idUsuario, idRol FROM usuario
+                $query = "SELECT idUsuario, idRol, nombres, clave FROM usuario
                         WHERE email = :email AND clave = :clave";
                 
                 $smt = $this->CNX->prepare($query);
@@ -36,21 +38,21 @@ class login{
                 if(empty($res)){
                     header('location: index.php?v=login');
                 }else{
+                    
                     $_SESSION['idUsuario'] = $res['idUsuario'];
                     $_SESSION['idRol'] = $res['idRol'];
+                    $_SESSION['nombre'] = $res['nombres'];
+                    $_SESSION['clave'] = $res['clave'];
 
                     if($_SESSION['idRol'] == 1){
-                        session_start();
+                        
                         header('location: index.php?v=inicioA');
-                        echo 'admin';
                     }elseif($_SESSION['idRol'] == 2){
-                        session_start();
+                        
                         header('location: index.php?v=inicioS');
-                        echo 'sub';
                     }elseif($_SESSION['idRol'] == 3){
-                        session_start();
+                        
                         header('location: index.php?v=inicioE');
-                        echo 'empleado';
                     }
                 }
             }
