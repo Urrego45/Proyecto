@@ -1,6 +1,6 @@
 <div class="card w-75 p-0 my-5 mx-auto">
     <div class="card-header bg-light p-5">
-        <div class="container bg-primary">
+        <div class="container">
             <div class="">
                 <div class="">
                     <h2>Registrar Producto</h2>
@@ -32,6 +32,18 @@
                                 <label for="">Ventas</label>
                                 <div class="inputs">
                                     <input type="number" name="ventas" id="" class="form-control m-1" placeholder="ventas">
+                                    <i class="estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="error"></p>
+                            </div>
+
+                            <div class="grupo" id="grupo_checkbox">
+                                <label for="">Con que insumos esta echo este producto?</label>
+                                <div class="inputs"> 
+                                    <?php  foreach($this->productof->listarInsumos() as $td): ?>
+                                        <input type="checkbox" id="" name="insumo[]" value="<?php echo $td->idInsumo; ?>"> <?php echo $td->nombre ?>
+                                        <input type="text" name="cantidadI[]" id="">
+                                    <?php endforeach; ?>
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="error"></p>
