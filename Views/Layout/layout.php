@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="http://localhost/Emi/assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+
     <title> Dashboard Emi - <?=$pageTitle?> </title>
 </head>
 <body>
@@ -107,6 +108,8 @@
         }
 
     </script>
+
     <script src="http://localhost/Emi/assets/js/validacion.js"></script>
+
 </body>
 </html>

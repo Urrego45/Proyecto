@@ -13,15 +13,17 @@ class PDF extends FPDF
     function Header(){
         // Arial bold 15
         $this->SetFont('Arial','B',11);
+
+        $this->SetTextColor(17,40,82);
         // Movernos a la derecha
         $this->Cell(60);
         // Título
         if($_SESSION['tiempo'] == 1){
-            $this->Cell(70,10,'Reporte de producto final dia',0,0,'C');
+            $this->Cell(70,10,'Reporte de producto final dia',1,0,'C');
         }elseif($_SESSION['tiempo'] == 2){
-            $this->Cell(70,10,'Reporte de producto final semana',0,0,'C');
+            $this->Cell(70,10,'Reporte de producto final semana',1,0,'C');
         }else{
-            $this->Cell(70,10,'Reporte de producto final mes',0,0,'C');
+            $this->Cell(70,10,'Reporte de producto final mes',1,0,'C');
         }
         // Salto de línea
         $this->Ln(20);
@@ -62,14 +64,15 @@ if($_SESSION['tiempo'] == 1){
     $pdf->AliasNbPages();
     $pdf->AddPage();
     $pdf->SetFont('Arial','',10);
+    $pdf->SetFillColor(225,225,225);
     
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
-        $pdf->Cell(9, 10, $row['idProductoFinal'], 1, 0, 'C', 0);
-        $pdf->Cell(30, 10, $row['nombre'], 1, 0, 'C', 0);
-        $pdf->Cell(40, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(40, 10, $row['ventas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['estado'], 1, 0,'C', 0);
-        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1,'C', 0);
+        $pdf->Cell(9, 10, $row['idProductoFinal'], 1, 0, 'C', 1);
+        $pdf->Cell(30, 10, $row['nombre'], 1, 0, 'C', 1);
+        $pdf->Cell(40, 10, $row['precio'], 1, 0, 'C', 1);
+        $pdf->Cell(40, 10, $row['ventas'], 1, 0, 'C', 1);
+        $pdf->Cell(20, 10, $row['estado'], 1, 0,'C', 1);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1,'C', 1);
     }
     
     $pdf->Output(); 
@@ -84,15 +87,15 @@ if($_SESSION['tiempo'] == 1){
     $pdf->AliasNbPages();
     $pdf->AddPage();
     $pdf->SetFont('Arial','',10);
-
+    $pdf->SetFillColor(225,225,225);
     
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
-        $pdf->Cell(9, 10, $row['idProductoFinal'], 1, 0, 'C', 0);
-        $pdf->Cell(30, 10, $row['nombre'], 1, 0, 'C', 0);
-        $pdf->Cell(40, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(40, 10, $row['ventas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['estado'], 1, 0,'C', 0);
-        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1,'C', 0);
+        $pdf->Cell(9, 10, $row['idProductoFinal'], 1, 0, 'C', 1);
+        $pdf->Cell(30, 10, $row['nombre'], 1, 0, 'C', 1);
+        $pdf->Cell(40, 10, $row['precio'], 1, 0, 'C', 1);
+        $pdf->Cell(40, 10, $row['ventas'], 1, 0, 'C', 1);
+        $pdf->Cell(20, 10, $row['estado'], 1, 0,'C', 1);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1,'C', 1);
     }
     
     $pdf->Output(); 
@@ -106,15 +109,15 @@ if($_SESSION['tiempo'] == 1){
     $pdf->AliasNbPages();
     $pdf->AddPage();
     $pdf->SetFont('Arial','',10);
-
+    $pdf->SetFillColor(225,225,225);
     
     while($row = $smt->fetch(PDO::FETCH_ASSOC)){
-        $pdf->Cell(9, 10, $row['idProductoFinal'], 1, 0, 'C', 0);
-        $pdf->Cell(30, 10, $row['nombre'], 1, 0, 'C', 0);
-        $pdf->Cell(40, 10, $row['precio'], 1, 0, 'C', 0);
-        $pdf->Cell(40, 10, $row['ventas'], 1, 0, 'C', 0);
-        $pdf->Cell(20, 10, $row['estado'], 1, 0,'C', 0);
-        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1,'C', 0);
+        $pdf->Cell(9, 10, $row['idProductoFinal'], 1, 0, 'C', 1);
+        $pdf->Cell(30, 10, $row['nombre'], 1, 0, 'C', 1);
+        $pdf->Cell(40, 10, $row['precio'], 1, 0, 'C', 1);
+        $pdf->Cell(40, 10, $row['ventas'], 1, 0, 'C', 1);
+        $pdf->Cell(20, 10, $row['estado'], 1, 0,'C', 1);
+        $pdf->Cell(20, 10, $row['FechaRegistro'], 1, 1,'C', 1);
     }
 
     $pdf->Output(); 

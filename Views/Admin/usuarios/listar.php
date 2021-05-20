@@ -1,6 +1,6 @@
 <div class="card w-75 p-0 my-5 mx-auto">
     <div class="card-header bg-light p-5">
-        <table>
+        <table id="tabla" name="tabla" class="">
             <thead>
                 <tr >
                     <th colspan="9"> <center> <a href="?v=crear" class="btn btn-primary" value="">Crear nuevo usuario </a></center> </th>

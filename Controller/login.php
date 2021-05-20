@@ -18,7 +18,8 @@ class login{
         
         if(isset($_POST['validar'])){
             if(empty($_POST['email']) || empty($_POST['pass'])){
-                echo 'ingrese';
+                
+                header('location: index.php?v=index');
             }else{
                 session_start();
                 $email = $_REQUEST['email'];

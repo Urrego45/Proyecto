@@ -20,16 +20,16 @@
                                 <input type="email" name="email" id="email" class="f__input form-control" placeholder="Correo@gmail.com">
                                 <i class="estado fas fa-times-circle"></i>
                             </div>
-                            <p class="error">Ingrese su Correo electronico correctamente.</p>
+                            <p class="error">Correo incorrecto. solo se permiten letras (a-z), numeros y signos de puntuacion (.)</p>
                         </div>
 
                         <div class="grupo form-group" id="grupo_pass">
                             <label for="pass" class="f_label text-info">Constraseña:</label><br>
                             <div class="inputs">
-                                <input type="password" name="pass" id="pass" class="f__input form-control" placeholder="Contraseña123">
+                                <input type="password" name="pass" id="pass" class="f__input form-control">
                                 <i class="estado fas fa-times-circle"></i>
                             </div>
-                            <p class="error">Contraseña incorrecta. la contraseña debe ser mayor a 8 caracteres.</p>
+                            <p class="error">Contraseña incorrecta. la contraseña debe tener 8 a 14 caracteres.</p>
                         </div>
 
                         <div class="mensageForm" id="mensageForm">
