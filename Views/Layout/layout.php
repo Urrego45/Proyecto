@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
-    <title> Dashboard Emi - <?=$pageTitle?> </title>
+    <title> Administrador Emi - <?=$pageTitle?> </title>
 </head>
 <body>
         
@@ -19,9 +19,9 @@
 
         <nav class="navbar fixed-top navbar-dark bg-dark">
 
-            <a class="navbar-brand" href="?v=inicioA">Dashboard - EMI - <?php echo $_SESSION['nombre']; ?></a>
+            <a class="navbar-brand" href="?v=inicioA">Administrador - EMI - <?php echo $_SESSION['nombre']; ?></a>
 
-            <a class="navbar-brand" href="?v=cambioPass">Cambiar contraseña</a>
+            <a class="navbar-brand" href="?v=enviarCorreo">Cambiar contraseña</a>
 
             
             <ul class="navbar-nav">
@@ -109,7 +109,8 @@
 
     </script>
 
-    <script src="http://localhost/Emi/assets/js/validacion.js"></script>
+    <!-- <script defer src="http://localhost/Emi/assets/js/validacion.js"></script> --><!-- 
+    <script defer src="http://localhost/Emi/assets/js/insumoProductoF.js"></script> -->
 
 </body>
 </html>

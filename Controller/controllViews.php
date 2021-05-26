@@ -8,7 +8,6 @@ class controllVistas{
     public $viewPath = 'C:\xampp\htdocs\Emi\Views';
     public $layout;
     public $layoutBl;
-    public $layoutEmp;
     public $layoutSub;
 
 
@@ -251,12 +250,20 @@ class controllVistas{
     }
 
 
-    public function cambioPass(){
+    public function enviarCorreo(){
         $pageTitle = 'Cambiar contraseña';
-        $body = $this->viewPath.'\cambioPass.php';
+        $body = $this->viewPath.'\enviarCorreo.php';
         
 
         include_once $this->layout;
+    }
+
+    public function cambiarPass(){
+        $pageTitle = 'Cambiar contraseña';
+        $body = $this->viewPath.'\cambiarPass.php';
+        
+
+        include_once $this->layoutBl;
     }
 
 

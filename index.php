@@ -4,7 +4,6 @@ include_once 'Controller/controllInsumo.php';
 include_once 'Controller/controllInsumoprodf.php';
 include_once 'Controller/controllProductofinal.php';
 include_once 'Controller/controllProveedor.php';
-include_once 'Controller/controllRol.php';
 include_once 'Controller/controllUsuario.php';
 include_once 'Controller/controllViews.php';
 include_once 'Controller/login.php';
@@ -16,7 +15,6 @@ $insumo = new controllInsumo();
 $insumoprodf = new controllInsumoprodf();
 $productof = new controllProductofinal();
 $proveedor = new controllProveedor();
-$rol = new controllRol();
 $usuario = new controllUsuario();
 
 $vistas = new controllVistas();
@@ -43,11 +41,6 @@ if(isset($_REQUEST['i'])){ // INSUMO
 
     $action = $_REQUEST['p'];
     call_user_func(array($proveedor,$action));
-
-}elseif(isset($_REQUEST['r'])){ // ROL
-
-    $action = $_REQUEST['r'];
-    call_user_func(array($rol,$action));
 
 }elseif(isset($_REQUEST['u'])){ // USUARIO
     

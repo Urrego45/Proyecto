@@ -88,13 +88,26 @@ class usuario{
         }
     }
 
-    public function cambioPass($data){
+    public function enviarCorreo($data){ 
+        try {
+            $query = "SELECT idUsuario FROM `usuario` WHERE email = ?";
+            $res = $this->CNX->prepare($query)->execute(array(
+                $data->email));
+
+            $_SESSION['id'] = $res;
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function cambiarPass($data){ 
         try {
             $query = "UPDATE usuario SET clave=?
-                        WHERE idUsuario=?";
-            $this->CNX->prepare($query)->execute(array(
-                $data->clave,
-                $data->idUsuario));
+            WHERE idUsuario=?";
+            $res = $this->CNX->prepare($query)->execute(array(
+                $data->pass,
+                $data->id));
         } catch (Exception $e) {
             die($e->getMessage());
         }

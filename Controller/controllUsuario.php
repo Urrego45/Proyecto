@@ -17,7 +17,7 @@ class controllUsuario{
         $alm->idUsuario = $_POST['idU'];
         $alm->nombres = $_POST['nombre'];
         $alm->apellidos = $_POST['apellido'];
-        $alm->telefono = $_POST['telefono'];
+        $alm->telefono = $_POST['tel'];
         $alm->email = $_POST['email'];
         $alm->clave = $_POST['pass'];
         $alm->idRol = $_POST['rol'];
@@ -27,20 +27,35 @@ class controllUsuario{
         header("Location: index.php?v=listar");
     }
 
-    public function cambiarPass(){
-        $alm = new usuario();
-        $alm->idUsuario = $_POST['idU'];
+    public function enviarCorreo(){
+
+        session_start();
+
+        $alm = new usuario(); 
+        $_SESSION['email'] = $alm->email = $_POST['email'];
         
-        if($_POST['pass1'] == $_POST['pass2']){
-            $alm->clave = $_POST['pass2'];
+        $this->usuario->enviarCorreo($alm);
 
-            $this->usuario->cambioPass($alm);
-            header("Location: index.php?v=inicioA");
+        
 
-        }else{
-            echo 'error';
+        if($_SESSION['id'] == $_POST['idU']){
+            header('Location: Model/correo.php');
         }
+    }
 
+    public function cambiarPass(){
+
+        $alm = new usuario();
+        $alm->id = $_POST['idU'];
+        $alm->email = $_POST['email'];
+        
+        
+
+        if($_POST['pass1'] == $_POST['pass2']){
+            $alm->pass = $_POST['pass2'];
+            $this->usuario->cambiarPass($alm);
+            header('Location: index.php?v=index');
+        }
     }
 
     

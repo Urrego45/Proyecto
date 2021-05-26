@@ -5,7 +5,7 @@
                 <div class="">
                     <h2>Registrar usuario</h2>
                 </div>
-                <form action="?u=crear" method="post" id="formulario" onsubmit="return enviar()">
+                <form action="?u=crear" method="post" id="formulario">
 
                     <div class="row">
 
@@ -33,7 +33,7 @@
                                 <label for="tel">Telefono</label>
                                 <div class="inputs">
                                     <input type="number" name="tel" id="tel" class="f__input form-control m-1" placeholder="1234567890">
-                                    <i class="estado fas fa-times-circle"></i>
+                                    <i class="estado fas fa-times-circle"></i> 
                                 </div>
                                 <p class="error">Telefono incorrecto. solo se permiten numeros y tener 10 caracteres.</p>
                             </div>
@@ -72,6 +72,7 @@
                                 </div>
                                 <p class="error">Escoja un rol.</p>
                             </div>
+
                         </div>
                     </div>
                     <div class="col m-3">

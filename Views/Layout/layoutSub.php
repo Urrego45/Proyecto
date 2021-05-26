@@ -18,7 +18,7 @@
         <nav class="navbar fixed-top navbar-dark bg-dark">
 
             <a class="navbar-brand" href="?v=inicioS">Sub Admin - EMI - <?php echo $_SESSION['nombre']; ?></a>
-            <a class="navbar-brand" href="?v=cambioPass">Cambiar contraseña</a>
+            <a class="navbar-brand" href="?v=enviarCorreo">Cambiar contraseña</a>
 
             <ul class="navbar-nav">
 

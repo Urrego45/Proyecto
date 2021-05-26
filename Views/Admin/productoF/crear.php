@@ -37,18 +37,45 @@
                                 <p class="error">Ingrese un numero.</p>
                             </div>
 
-                            <div class="grupo" id="grupo_insumo">
-                                <label for="insumo">Con que insumos esta echo este producto?</label>
-                                <div class="inputs"> 
-                                    <select name="" id="" class="form-control m-1">
-                                        <?php  foreach($this->productof->listarInsumos() as $td): ?>
-                                            <option value="<?php echo $td->idInsumo;?>"><?php echo $td->nombre; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                    <i class="estado fas fa-times-circle"></i>
+
+                            <h1 for="insumo">Con que insumos esta echo este producto?</h1>
+                            <br>
+                            <input type="button" value="+" class="btn btn-primary" id="agregar"> 
+
+                            <div id="contenedor">
+
+                                <div id="clonacion" class="row p-2">
+                                    <div class="grupo col" id="grupo_insumo">
+                                        
+                                        <div class="inputs"> 
+                                            <select name="selectInsumo" id="selectInsumo" class="form-control m-1">
+                                                <option value="0" selected diseable>-- Seleccione --</option>
+                                                <?php  foreach($this->productof->listarInsumos() as $td): ?>
+                                                    <option value="<?php echo $td->idInsumo;?>"><?php echo $td->nombre; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <i class="estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="error">ingrese un insumo.</p>
+                                    </div>
+
+                                    <div class="grupo col" id="grupo_entrada">
+                                        <div class="inputs">
+                                            <input type="number" class="f__input form-control m-1" name="entrada" id="entrada" value="0">
+                                            <i class="estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="error">Solo numeros mayores a 0</p>
+                                    </div>
+
+                                    <div class="grupo col" id="grupo_entrada">
+                                        <input type="button" value="Eliminar" class="btn btn-danger" onclick="quitar(this)">
+                                    </div>
                                 </div>
-                                <p class="error">ingrese un insumo.</p>
+
+
+                                
                             </div>
+
                         </div>
                     </div>
                     <div class="col m-3">

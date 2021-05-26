@@ -12,7 +12,7 @@ const expresiones = {
     numeros: /^[\d]+$/
 }
 
-const campos = {
+const campos = { 
     email: false,
 	pass: false,
     texto: false,
@@ -20,6 +20,8 @@ const campos = {
     textoSim: false,
     numeros: false
 } 
+
+
 
 const validarFormulario = (e) => {
     switch (e.target.name){
@@ -91,11 +93,9 @@ const validarCampo = (expresion,input, campo) =>{
         document.querySelector(`#grupo_${campo} i`).classList.add('fa-times-circle');
         document.querySelector(`#grupo_${campo} i`).classList.remove('fa-check-circle');
         document.querySelector(`#grupo_${campo} .error`).classList.add('error-activo');
-        campos[campo] = true;
+        campos[campo] = false;
     }
 }
-
-
 
 inputs.forEach((input)=>{
     input.addEventListener('keyup', validarFormulario);
@@ -104,3 +104,11 @@ inputs.forEach((input)=>{
 
 
 
+formulario.addEventListener("submit", (e)=>{
+    console.log(campos)
+    if(!(campos.email && campos.numeros && campos.pass && campos.tel && campos.texto)){
+        
+    }
+});
+
+ 
