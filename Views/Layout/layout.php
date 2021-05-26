@@ -109,8 +109,8 @@
 
     </script>
 
-    <!-- <script defer src="http://localhost/Emi/assets/js/validacion.js"></script> --><!-- 
-    <script defer src="http://localhost/Emi/assets/js/insumoProductoF.js"></script> -->
+    <!-- <script defer src="http://localhost/Emi/assets/js/validacion.js"></script> -->
+    <script  src="http://localhost/Emi/assets/js/insumoProductoF.js"></script>
 
 </body>
 </html>
