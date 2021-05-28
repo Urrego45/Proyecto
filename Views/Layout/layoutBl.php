@@ -22,7 +22,7 @@
         </div>
 
 
-    
-<!-- <script src="http://localhost/Emi/assets/js/validacion.js"></script> -->
+<!-- <script src="http://localhost/Emi/assets/js/app.js"></script>
+<script src="http://localhost/Emi/assets/js/validarFormulario.js"></script> -->
 </body>
 </html>
