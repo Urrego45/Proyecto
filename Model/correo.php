@@ -17,15 +17,14 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'correosena.asp@gmail.com
-    ';                     //SMTP username
+    $mail->Username   = 'correosena.asp@gmail.com';                     //SMTP username
     $mail->Password   = 'senacorreo';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('correosena.asp@gmail.com', 'santiago');
-    $mail->addAddress($_SESSION['email']);     //Add a recipient
+    $mail->setFrom('correosena.asp@gmail.com',);
+    $mail->addAddress($_SESSION['emailC']);     //Add a recipient
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML

@@ -14,9 +14,9 @@ class controllProveedor{
 
         $alm = new proveedor();
         $alm->idProveedor = $_POST['idU'];
-        $alm->nombreProveedor = $_POST['nombre'];
+        $alm->nombreProveedor = $_POST['nombreP'];
         $alm->direccion  = $_POST['direccion'];
-        $alm->telefono = $_POST['telefono'];
+        $alm->telefono = $_POST['tel'];
         $alm->email = $_POST['email'];
         $alm->estado = $_POST['estado'];
         $alm->fechaRegistro = date('Y-m-d');

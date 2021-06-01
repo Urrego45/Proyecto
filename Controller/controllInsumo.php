@@ -13,14 +13,14 @@ class controllInsumo{
     public function crear(){
         $alm = new insumo();
         $alm->idInsumo = $_POST['idU'];
-        $alm->idProveedor = $_POST['provee'];
+        $alm->idProveedor = $_POST['proveedor'];
         
         $alm->nombre = $_POST['nombre'];
         $alm->precio = $_POST['precio'];
         $alm->vencimiento = $_POST['fechaV'];
         $alm->stockInicial = $_POST['stockI'];
         $alm->stock = $_POST['stockA'];
-        $alm->entradas = $_POST['insumE'];
+        $alm->entradas = $_POST['entrada'];
         $alm->perdidas = $_POST['perdidas'];
         $alm->estado = $_POST['estado'];
         $alm->fechaRegistro = date('Y-m-d');

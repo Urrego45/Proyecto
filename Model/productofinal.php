@@ -40,14 +40,13 @@ class productofinal{
                 $data->ventas,
                 $data->fechaRegistro));
 
-            
 
-            foreach($data->insumo as $td){
-                $query = "INSERT INTO `insuprodf`(`idInsumo`, `idProductoFinal`, `cantidad`, `FechaRegistro`)
-                VALUES (?,(SELECT MAX(idProductoFinal) FROM productofinal),?,?)";
+            for($i = 0; $i < count($data->insumo); $i++){
+                $query = "INSERT INTO insuprodf (idInsumo, idProductoFinal, cantidad, FechaRegistro) 
+                    VALUES (?,(SELECT MAX(idProductoFinal) FROM productofinal),?,?)";
                 $this->CNX->prepare($query)->execute(array(
-                    $data->insumo,
-                    $data->cantidadI,
+                    $data->insumo[$i],
+                    $data->cantidadI[$i],
                     $data->fechaRegistro));
             }
             
@@ -62,6 +61,7 @@ class productofinal{
             $query = "SELECT * FROM productofinal where idProductoFinal=?";
             $smt = $this->CNX->prepare($query);
             $smt->execute(array($id));
+
             return $smt->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
@@ -89,6 +89,31 @@ class productofinal{
             $smt = $this->CNX->prepare($query);
             $smt->execute();
             return $smt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function listarInsumosPF($data){
+        try {
+            $query = "SELECT * FROM `insuprodf` WHERE `idProductoFinal` = ?";
+            $smt = $this->CNX->prepare($query);
+            $smt->execute(array($data->idProductoFinal));
+            return $smt->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function contar($id){
+        try {
+            $query = "SELECT COUNT(*) FROM `insuprodf` WHERE `idProductoFinal` = ?";
+            $smt = $this->CNX->prepare($query);
+            $smt->execute(array($id));
+
+            $smt->fetch(PDO::FETCH_OBJ);
+            return $smt->fetch(PDO::FETCH_OBJ);
+
         } catch (Exception $e) {
             die($e->getMessage());
         }

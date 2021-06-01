@@ -19,19 +19,21 @@ class controllProductofinal{
         $alm->ventas = $_POST['ventas'];
         $alm->estado = $_POST['estado'];
         $alm->fechaRegistro = date('Y-m-d');
-
         
         
         $alm->insumo = $_POST['insumo'];
         $alm->cantidadI = []; 
 
+        
+
         for($i = 0; $i < count($_POST['cantidadI']); $i++){
             if($_POST['cantidadI'][$i] != null || $_POST['cantidadI'][$i] != ""){
-                $alm->cantidadI[] = $_POST['cantidadI'][$i];
+                $alm->cantidadI[] = $_POST['cantidadI'][$i];  
             }
         }
 
         $alm->idProductoFinal > 0 ? $this->productof->editar($alm) : $this->productof->registrar($alm);
+
 
         if(isset($_POST['ad'])){
             header("Location: index.php?v=listarPr");

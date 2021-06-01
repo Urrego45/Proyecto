@@ -51,18 +51,46 @@
                                 <p class="error">ingrese un estado.</p>
                             </div>
 
-                            <div class="grupo" id="grupo_checkbox">
-                                <label for="">Con que insumos esta echo este producto?</label>
-                                <div class="inputs"> 
-                                    <select name="" id="" class="form-control m-1">
-                                        <?php  foreach($this->productof->listarInsumos() as $td): ?>
-                                            <option value="<?php echo $td->idInsumo;?>"><?php echo $td->nombre; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                    <i class="estado fas fa-times-circle"></i>
+                            <h1 for="insumo">Con que insumos esta echo este producto?</h1>
+                            <br>
+                            <input type="button" value="+" class="btn btn-primary" id="agregar"> 
+
+                            <?php  
+                            
+                            for($i = 0; $i < $this->productof->contar($alm->idProductoFinal); $i++): ?>
+                                <div id="contenedor">
+
+                                    <div id="clonacion" class="row p-2">
+                                        <div class="grupo col" id="grupo_insumo">
+                                            
+                                            <div class="inputs"> 
+                                                <select name="insumo[]" id="insumo" class="form-control m-1">
+                                                    <option  diseable>-- Seleccione --</option>
+                                                    <?php  foreach($this->productof->listarInsumos() as $td): ?>
+                                                        <option selected value="<?php echo $alm->idInsumo;?>"><?php echo $td->nombre; ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                                <i class="estado fas fa-times-circle"></i>
+                                            </div>
+                                            <p class="error">ingrese un insumo.</p>
+                                        </div>
+
+                                        <div class="grupo col" id="grupo_entrada">
+                                            <div class="inputs">
+                                                <input type="number" class="f__input form-control m-1" name="cantidadI[]" id="cantidadI" value="<?php echo $alm->cantidad; ?>">
+                                                <i class="estado fas fa-times-circle"></i>
+                                            </div>
+                                            <p class="error">Solo numeros mayores a 0</p>
+                                        </div>
+
+                                        <div class="grupo col" id="grupo_entrada">
+                                            <input type="button" value="Eliminar" class="btn btn-danger" onclick="quitar(this)">
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="error"></p>
-                            </div>
+
+                            <?php endfor; ?>
+                            
                         </div>
                     </div>
                     <div class="col m-3">

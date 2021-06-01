@@ -83,7 +83,7 @@
                             <div class="grupo" id="grupo_proveedor">
                                 <label for="">Proveedor</label>
                                 <div class="inputs">
-                                    <select name="provee" id=""class="f__input form-control m-1">
+                                    <select name="proveedor" id="proveedor"class="f__input form-control m-1">
                                         <?php foreach($this->insumo->listarProveedor() as $td): ?>
                                             <option value="<?php echo $td->idProveedor ?>" <?php echo $td->idProveedor == $alm->idProveedor ? 'selected' : '' ?>> <?php echo $td->nombreProveedor ?> </option>
                                         <?php endforeach; ?>

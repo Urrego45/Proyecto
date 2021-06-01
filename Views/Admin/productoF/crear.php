@@ -48,8 +48,8 @@
                                     <div class="grupo col" id="grupo_insumo">
                                         
                                         <div class="inputs"> 
-                                            <select name="selectInsumo" id="selectInsumo" class="form-control m-1">
-                                                <option value="0" selected diseable>-- Seleccione --</option>
+                                            <select name="insumo[]" id="insumo" class="form-control m-1">
+                                                <option selected diseable>-- Seleccione --</option>
                                                 <?php  foreach($this->productof->listarInsumos() as $td): ?>
                                                     <option value="<?php echo $td->idInsumo;?>"><?php echo $td->nombre; ?></option>
                                                 <?php endforeach; ?>
@@ -61,7 +61,7 @@
 
                                     <div class="grupo col" id="grupo_entrada">
                                         <div class="inputs">
-                                            <input type="number" class="f__input form-control m-1" name="entrada" id="entrada" value="0">
+                                            <input type="number" class="f__input form-control m-1" name="cantidadI[]" id="cantidadI" value="0">
                                             <i class="estado fas fa-times-circle"></i>
                                         </div>
                                         <p class="error">Solo numeros mayores a 0</p>
@@ -71,8 +71,6 @@
                                         <input type="button" value="Eliminar" class="btn btn-danger" onclick="quitar(this)">
                                     </div>
                                 </div>
-
-
                                 
                             </div>
 

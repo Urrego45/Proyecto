@@ -32,11 +32,11 @@ class controllUsuario{
         session_start();
 
         $alm = new usuario(); 
-        $_SESSION['email'] = $alm->email = $_POST['email'];
+        $alm->email = $_POST['email'];
         
         $this->usuario->enviarCorreo($alm);
 
-        
+        $_SESSION['emailC'] = $_POST['email'];
 
         if($_SESSION['id'] == $_POST['idU']){
             header('Location: Model/correo.php');
