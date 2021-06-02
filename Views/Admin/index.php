@@ -5,6 +5,9 @@
         </div>
         <form method="post" action="?in=informe">
             <div>
+
+                <input type="hidden" name="usuario" value="ad">
+
                 <input type="submit" class="btn btn-danger m-1" name="insumo" value="Informe de Insumos">
                 <input type="submit" class="btn btn-danger m-1" name="producto" value="Informe de Prodcutos">
                 <input type="submit" class="btn btn-danger m-1" name="proveedor" value="Informe de Proveedores"> <br>
@@ -12,7 +15,7 @@
             </div>
             <div>
                 <select name="tiempo" id="" class="form-control m-1">
-                    <option disabled selected>Escoge el tiempo del informe</option>
+                    <option disabled selected value="0">Escoge el tiempo del informe</option>
                     <option value="1">dia</option>
                     <option value="2">Semana</option>
                     <option value="3">Mes</option>

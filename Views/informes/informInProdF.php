@@ -30,7 +30,6 @@ class PDF extends FPDF
         $this->Cell(9, 10, 'Id', 1, 0, 'C', 0);
         $this->Cell(20, 10, 'Insumo', 1, 0, 'C', 0);
         $this->Cell(35, 10, 'Producto Final', 1, 0, 'C', 0);
-        $this->Cell(25, 10, 'Precio', 1, 0, 'C', 0);
         $this->Cell(25, 10, 'Cantidad', 1, 0, 'C', 0);
         $this->Cell(25, 10, 'Fecha', 1, 1, 'C', 0);
 
@@ -69,7 +68,6 @@ if($_SESSION['tiempo'] == 1){
         $pdf->Cell(9, 10, $row['idInsuProdF'], 1, 0, 'C', 1);
         $pdf->Cell(20, 10, $row['idInsumo'], 1, 0, 'C', 1);
         $pdf->Cell(35, 10, $row['idProductoFinal'], 1, 0, 'C', 1);
-        $pdf->Cell(25, 10, $row['precio'], 1, 0, 'C', 1);
         $pdf->Cell(25, 10, $row['cantidad'], 1, 0, 'C', 1);
         $pdf->Cell(25, 10, $row['FechaRegistro'], 1, 1, 'C', 1);
     }
@@ -92,7 +90,6 @@ if($_SESSION['tiempo'] == 1){
         $pdf->Cell(9, 10, $row['idInsuProdF'], 1, 0, 'C', 1);
         $pdf->Cell(20, 10, $row['idInsumo'], 1, 0, 'C', 1);
         $pdf->Cell(35, 10, $row['idProductoFinal'], 1, 0, 'C', 1);
-        $pdf->Cell(25, 10, $row['precio'], 1, 0, 'C', 1);
         $pdf->Cell(25, 10, $row['cantidad'], 1, 0, 'C', 1);
         $pdf->Cell(25, 10, $row['FechaRegistro'], 1, 1, 'C', 1);
     }
@@ -114,7 +111,6 @@ if($_SESSION['tiempo'] == 1){
         $pdf->Cell(9, 10, $row['idInsuProdF'], 1, 0, 'C', 1);
         $pdf->Cell(20, 10, $row['idInsumo'], 1, 0, 'C', 1);
         $pdf->Cell(35, 10, $row['idProductoFinal'], 1, 0, 'C', 1);
-        $pdf->Cell(25, 10, $row['precio'], 1, 0, 'C', 1);
         $pdf->Cell(25, 10, $row['cantidad'], 1, 0, 'C', 1);
         $pdf->Cell(25, 10, $row['FechaRegistro'], 1, 1, 'C', 1);
     }

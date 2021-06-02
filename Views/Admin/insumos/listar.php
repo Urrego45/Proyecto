@@ -23,8 +23,8 @@
                 <tr>
                     <td><?php echo $ac->idInsumo; ?></td>
                     <td><?php echo $ac->idProveedor; ?></td>
-                    <td>$ <?php echo $ac->nombre; ?></td>
-                    <td><?php echo $ac->precio; ?></td>
+                    <td><?php echo $ac->nombre; ?></td>
+                    <td>$ <?php echo $ac->precio; ?></td>
                     <td><?php echo $ac->vencimiento; ?></td>
                     <td><?php echo $ac->stockInicial; ?></td>
                     <td><?php echo $ac->stock; ?></td>
