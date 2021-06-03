@@ -51,9 +51,6 @@ class login{
                     }elseif($_SESSION['idRol'] == 2){
                         
                         header('location: index.php?v=inicioS');
-                    }elseif($_SESSION['idRol'] == 3){
-                        
-                        header('location: index.php?v=inicioE');
                     }
                 }
             }

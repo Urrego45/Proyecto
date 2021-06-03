@@ -23,7 +23,7 @@ try {
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('correosena.asp@gmail.com',);
+    $mail->setFrom('correosena.asp@gmail.com','Cambiar clave');
     $mail->addAddress($_SESSION['emailC']);     //Add a recipient
 
     //Content
@@ -35,8 +35,8 @@ try {
 
     $mail->send();
 
-    echo 'Enviado correctamente';
-
+    echo '<script> alert("Revisa tu correo para cambiar contraseña"); </script>';
+    header('location: http://localhost/Emi/index.php?l=cerrarSesion');
 } catch (Exception $e) {
     echo "Error: {$mail->ErrorInfo}";
 }

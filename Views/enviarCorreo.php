@@ -4,7 +4,7 @@
             <div class="">
                 <h1>¿Desea cambiar la contraseña?</h1>
                 <p>Ingrese su correo electronico</p>
-                <form action="?u=cambiarPass" method="post">
+                <form action="?u=enviarCorreo" method="post">
                     <div class="row">
                         <div class="col m-3">
                             <input type="hidden" name="idU" value="<?php echo $_SESSION['idUsuario']; ?>">

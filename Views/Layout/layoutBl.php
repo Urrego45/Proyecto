@@ -21,8 +21,11 @@
 
         </div>
 
+<!-- 
+<script src="http://localhost/Emi/assets/js/app.js">
 
-<!-- <script src="http://localhost/Emi/assets/js/app.js"></script>
+    
+</script>
 <script src="http://localhost/Emi/assets/js/validarFormulario.js"></script> -->
 </body>
 </html>

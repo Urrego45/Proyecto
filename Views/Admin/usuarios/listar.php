@@ -12,7 +12,6 @@
                     <th>Apellido</th>
                     <th>Telefono</th>
                     <th>Email</th>
-                    <th>Clave</th>
                     <th>Estado</th>
                 </tr>
             </thead>
@@ -25,7 +24,6 @@
                     <td><?php echo $ac->apellidos; ?></td>
                     <td><?php echo $ac->telefono; ?></td>
                     <td><?php echo $ac->email; ?></td>
-                    <td><?php echo $ac->clave; ?></td>
                     <td><?php echo $ac->estado; ?></td>
                     <td>
                         <a href="?v=editar&id=<?php echo $ac->idUsuario; ?>" class="btn btn-block btn-danger">Editar</a>

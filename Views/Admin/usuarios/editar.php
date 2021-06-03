@@ -55,7 +55,7 @@
                             <div class="grupo" id="grupo_pass">
                                 <label for="pass">Contraseña</label>
                                 <div class="inputs">
-                                    <input type="text" name="pass" id="pass" class="f__input form-control m-1"  value="<?php echo $alm->clave; ?>">
+                                    <input type="password" name="pass" id="pass" class="f__input form-control m-1" disabled  value="<?php echo $alm->clave; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="error">Contraseña incorrecta. la contraseña debe tener 8 a 14 caracteres.</p>
