@@ -6,8 +6,7 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        El producto "<?php echo ucwords($alm->nombre); ?>" tiene como  "<?php echo $alm->idProductoFinal; ?>"
-                    </div>
+                        En desarrollo.
                     <br>
                     <div>
                         <table border="2">

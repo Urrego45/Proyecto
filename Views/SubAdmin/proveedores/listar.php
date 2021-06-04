@@ -5,8 +5,8 @@
                 <tr>
                     <th>Id proveedor</th>
                     <th>Nombre proveedor</th>
-                    <th>Direccion</th>
-                    <th>Telefono</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
                     <th>Email</th>
                     <th>Estado</th>
                 </tr>

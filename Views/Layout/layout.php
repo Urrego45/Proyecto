@@ -27,7 +27,7 @@
             <ul class="navbar-nav">
                 
                 <li class="nav-item">
-                    <a class="nav-link  px-2 rounded linkDark2Hover" href="?l=cerrarSesion"> Cerrar sesion </a>                    
+                    <a class="nav-link  px-2 rounded linkDark2Hover" href="?l=cerrarSesion"> Cerrar sesión </a>                    
 
                 </li>
 
@@ -52,7 +52,7 @@
 
 
                 <li class="nav-item">
-                    <a href="?v=inicioA" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)"> &xrarr;  Home</a>
+                    <a href="?v=inicioA" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)"> &xrarr;  Inició</a>
                 </li>
                 
                 <li class="nav-item">

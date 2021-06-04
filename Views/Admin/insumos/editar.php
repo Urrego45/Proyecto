@@ -3,7 +3,7 @@
         <div class="container">
             <div class="">
                 <div class="">
-                    <h2>Editar Insumo</h2>
+                    <h2>Editar insumo</h2>
                 </div>
 
                 <form action="?i=crear" method="post" id="formulario">
@@ -72,7 +72,7 @@
                             </div>
 
                             <div class="grupo" id="grupo_perdidas">
-                                <label for="perdidas">Perdidas de insumos</label>
+                                <label for="perdidas">Pérdidas de insumos</label>
                                 <div class="inputs">
                                     <input type="number" name="perdidas" id="perdidas" class="f__input form-control m-1" placeholder="Perdidas de insumos" value="<?php echo $alm->perdidas; ?>">
                                     <i class="estado fas fa-times-circle"></i>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="col m-3">
-                        <input type="submit" value="Registrar" class="btn btn-danger m-2">
+                        <input type="submit" value="Editar" class="btn btn-danger m-2">
                     </div>
                 </form>
 

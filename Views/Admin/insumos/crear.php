@@ -3,7 +3,7 @@
         <div class="container">
             <div class="">
                 <div class="">
-                    <h2>Registrar Insumo</h2>
+                    <h2>Registrar insumo</h2>
                 </div>
                 <form action="?i=crear" method="post" id="formulario">
                     <div class="row">
@@ -38,7 +38,7 @@
                             </div>
 
                             <div class="grupo" id="grupo_stockI">
-                                <label for="stockI">Stocl inicial</label>
+                                <label for="stockI">Stock inicial</label>
                                 <div class="inputs">
                                     <input type="number" name="stockI" id="stockI" class="f__input form-control m-1" placeholder="Stock inicial">
                                     <i class="estado fas fa-times-circle"></i>
@@ -60,7 +60,7 @@
                         <div class="col m-3">
 
                             <div class="grupo" id="grupo_entrada">
-                                <label for="entrada">Entradasd de insumos</label>
+                                <label for="entrada">Entradas de insumos</label>
                                 <div class="inputs">
                                     <input type="number" name="entrada" id="entrada" class="f__input form-control m-1" placeholder="Entradas de insumos">
                                     <i class="estado fas fa-times-circle"></i>
@@ -69,9 +69,9 @@
                             </div>
 
                             <div class="grupo" id="grupo_perdidas">
-                                <label for="perdidas">Perdidas de insumos</label>
+                                <label for="perdidas">Pérdidas de insumos</label>
                                 <div class="inputs">
-                                    <input type="number" name="perdidas" id="perdidas" class="f__input form-control m-1" placeholder="Perdidas de insumos">
+                                    <input type="number" name="perdidas" id="perdidas" class="f__input form-control m-1" placeholder="Pérdidas de insumos">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="error">Ingrese un numero.</p>

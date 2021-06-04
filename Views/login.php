@@ -6,13 +6,13 @@
     <div class="px-5">
 
     <div id="login">
-    <h3 class="text-center text-primary pt-5">Comidas Rapidas Emi</h3>
+    <h3 class="text-center text-primary pt-5">Comidas Rápidas Emi</h3>
     <div class="container">
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="login-column" class="col-md-6">
                 <div id="login-box" class="col-md-12">
                     <form class="form" id="formulario" action="?l=validar" method="post">
-                        <h3 class="text-center text-info">Iniciar sesion</h3>
+                        <h3 class="text-center text-info">Iniciar sesión</h3>
 
                         <div class="grupo form-group" id="grupo_email">
                             <label for="email" class="f_label text-info">Correo</label><br>
