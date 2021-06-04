@@ -11,6 +11,7 @@
                     <th>Precio</th>
                     <th>Ventas</th>
                     <th>Estado</th>
+                    <th colspan="2"> <center> Acciones </center></th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,12 @@
                     <td><?php echo $ac->estado; ?></td>
                     <td>
                         <a href="?v=editarPr&id=<?php echo $ac->idProductoFinal; ?>" class="btn btn-block btn-danger">Editar</a>
+
+                        
+
+                    </td>
+                    <td>
+                    <a href="?v=detalles&id=<?php echo $ac->idProductoFinal; ?>" class="btn btn-block btn-danger">detalles</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -30,4 +37,6 @@
         </table>
     </div>
 </div>
+
+
 

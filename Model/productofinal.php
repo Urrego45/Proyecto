@@ -93,31 +93,17 @@ class productofinal{
             die($e->getMessage());
         }
     }
-
-    public function listarInsumosPF($data){
+    public function listarInsumoPF($id){
         try {
-            $query = "SELECT * FROM `insuprodf` WHERE `idProductoFinal` = ?";
-            $smt = $this->CNX->prepare($query);
-            $smt->execute(array($data->idProductoFinal));
-            return $smt->fetch(PDO::FETCH_OBJ);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function contar($id){
-        try {
-            $query = "SELECT COUNT(*) FROM `insuprodf` WHERE `idProductoFinal` = ?";
+            $query = 'SELECT * FROM insuprodf where idProductoFinal=?';
             $smt = $this->CNX->prepare($query);
             $smt->execute(array($id));
-
-            $smt->fetch(PDO::FETCH_OBJ);
-            return $smt->fetch(PDO::FETCH_OBJ);
-
+            return $smt->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
+    
 
 }
 

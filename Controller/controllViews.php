@@ -267,6 +267,25 @@ class controllVistas{
     }
 
 
+    // Detalles
+
+    public function detalles(){
+        session_start();
+
+        $alm = new productofinal();
+        if(isset($_REQUEST['id'])){
+            $alm = $this->productof->cargarID($_REQUEST['id']);
+        }
+        $pageTitle = 'Editar Producto';
+        $body = $this->viewPath.'\detalles.php';
+        
+        if($_SESSION['idRol'] == 1){
+            include_once $this->layout;
+        }else{
+            include_once $this->layoutSub;
+        }
+    }
+
 
 }
 
