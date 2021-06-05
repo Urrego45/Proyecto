@@ -72,7 +72,7 @@ class usuario{
 
     public function editar($data){
         try {
-            $query = "UPDATE usuario SET idRol=?,nombres=?,apellidos=?,telefono=?,email=?,clave=?,estado=?
+            $query = "UPDATE usuario SET idRol=?,nombres=?,apellidos=?,telefono=?,email=?,estado=?
                         WHERE idUsuario=?";
             $this->CNX->prepare($query)->execute(array(
                 $data->idRol,
@@ -80,7 +80,6 @@ class usuario{
                 $data->apellidos,
                 $data->telefono,
                 $data->email,
-                $data->clave,
                 $data->estado,
                 $data->idUsuario));
         } catch (Exception $e) {
