@@ -97,8 +97,19 @@
                                 <label for="estado">Estado</label>
                                 <div class="inputs">
                                     <select name="estado" id="estado" class="f__input form-control m-1">
-                                        <option value="inactivo">Inactivo</option>
-                                        <option value="activo">Activo</option>
+                                    
+                                        <option value="<?php echo $alm->estado ?>" selected> <?php echo ucfirst($alm->estado) ?> </option>
+                                        
+                                        <?php if($alm->estado == 'activo'){ ?>
+
+                                            <option value="inactivo">Inactivo</option>
+
+                                        <?php }elseif($alm->estado == 'inactivo'){ ?>
+
+                                            <option value="activo">Activo</option>
+
+                                        <?php } ?>
+
                                     </select>
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>

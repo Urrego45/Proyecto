@@ -111,6 +111,7 @@
 
     <!-- <script defer src="http://localhost/Emi/assets/js/validacion.js"></script> -->
     <script  src="http://localhost/Emi/assets/js/insumoProductoF.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>
