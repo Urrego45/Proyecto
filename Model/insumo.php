@@ -38,7 +38,7 @@ class insumo{
 
     public function listarProveedor(){
         try {
-            $query = "SELECT * FROM proveedor WHERE estado = 1";
+            $query = 'SELECT * FROM proveedor WHERE estado = "activo"';
             $smt = $this->CNX->prepare($query);
             $smt->execute();
             return $smt->fetchAll(PDO::FETCH_OBJ);

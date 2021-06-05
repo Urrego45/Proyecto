@@ -25,8 +25,8 @@ class login{
                 $email = $_REQUEST['email'];
                 $pass = $_REQUEST['pass'];
 
-                $query = "SELECT idUsuario, idRol, nombres, clave FROM usuario
-                        WHERE email = :email AND clave = :clave";
+                $query = 'SELECT idUsuario, idRol, nombres, clave, estado FROM usuario
+                        WHERE email = :email AND clave = :clave AND estado = "activo"';
                 
                 $smt = $this->CNX->prepare($query);
                 $smt->bindValue(":email",$email);
@@ -44,13 +44,16 @@ class login{
                     $_SESSION['idRol'] = $res['idRol'];
                     $_SESSION['nombre'] = $res['nombres'];
                     $_SESSION['clave'] = $res['clave'];
+                    $_SESSION['estado'] = $res['estado'];
 
-                    if($_SESSION['idRol'] == 1){
-                        
+                    if($_SESSION['idRol'] == 1){        
+            
                         header('location: index.php?v=inicioA');
+            
                     }elseif($_SESSION['idRol'] == 2){
-                        
+                            
                         header('location: index.php?v=inicioS');
+            
                     }
                 }
             }

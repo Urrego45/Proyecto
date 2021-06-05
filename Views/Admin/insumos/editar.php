@@ -97,8 +97,8 @@
                                 <label for="estado">Estado</label>
                                 <div class="inputs">
                                     <select name="estado" id="estado" class="f__input form-control m-1">
-                                        <option value="0">inactivo</option>
-                                        <option value="1">activo</option>
+                                        <option value="inactivo">Inactivo</option>
+                                        <option value="activo">Activo</option>
                                     </select>
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
