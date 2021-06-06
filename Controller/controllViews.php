@@ -285,8 +285,6 @@ class controllVistas{
             include_once $this->layoutSub;
         }
     }
-
-
 }
 
 

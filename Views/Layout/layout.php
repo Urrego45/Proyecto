@@ -22,6 +22,7 @@
             <a class="navbar-brand" href="?v=inicioA">Administrador - EMI - <?php echo $_SESSION['nombre']; ?></a>
 
             <a class="navbar-brand" href="?v=enviarCorreo">Cambiar contraseña</a>
+            <a class="navbar-brand" href="http://localhost/Emi/Views/i.php">Cambiar contraseña</a>
 
             
             <ul class="navbar-nav">

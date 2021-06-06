@@ -97,6 +97,18 @@ class insumo{
         }
     }
 
+    public function aumentarInsumo($data){
+        try {
+            $query = "UPDATE `insumo` SET `stock`= stock + ?,`entradas`= entradas + ? WHERE idInsumo = ?";
+            $this->CNX->prepare($query)->execute(array(
+                $data->stock,
+                $data->cantidad,
+                $data->idInsumo));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
 
 
 }

@@ -33,6 +33,23 @@ class controllInsumo{
             header("Location: index.php?v=listarIS");
         }
         
+    }   
+
+    public function aumenta(){
+        $alm = new insumo();
+        $alm->idInsumo = $_POST['insumo'];
+        $alm->stock = $_POST['nuevos'];
+        $alm->cantidad = $_POST['nuevos'];
+
+        $this->insumo->aumentarInsumo($alm);
+
+        if(isset($_POST['ad'])){
+            
+            header("Location: index.php?v=listarI");
+        }else{
+            header("Location: index.php?v=listarIS");
+        }
+
     }
 
 }
