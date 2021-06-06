@@ -48,6 +48,13 @@ class productofinal{
                     $data->insumo[$i],
                     $data->cantidadI[$i],
                     $data->fechaRegistro));
+
+                $query = "UPDATE `insumo` SET `stock`= stock - ?,`perdidas`= perdidas + ? WHERE idInsumo = ?";
+                $this->CNX->prepare($query)->execute(array(
+                    $data->cantidadI[$i],
+                    $data->cantidadI[$i],
+                    $data->insumo[$i]));
+
             }
             
 

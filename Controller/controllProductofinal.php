@@ -35,6 +35,7 @@ class controllProductofinal{
         $alm->idProductoFinal > 0 ? $this->productof->editar($alm) : $this->productof->registrar($alm);
 
 
+
         if(isset($_POST['ad'])){
             header("Location: index.php?v=listarPr");
         }else{
