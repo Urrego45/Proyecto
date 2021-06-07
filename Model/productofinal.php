@@ -32,8 +32,8 @@ class productofinal{
 
     public function registrar(productofinal $data){
         try {
-            $query = "INSERT INTO productofinal (nombre,precio,ventas,estado,FechaRegistro)
-                    VALUES (?,?,?,2,?)";
+            $query = 'INSERT INTO productofinal (nombre,precio,ventas,estado,FechaRegistro)
+                    VALUES (?,?,?,"inactivo",?)';
             $this->CNX->prepare($query)->execute(array(
                 $data->nombre,
                 $data->precio,

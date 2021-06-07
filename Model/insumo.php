@@ -49,8 +49,8 @@ class insumo{
 
     public function registrar(insumo $data){
         try {
-            $query = "INSERT INTO insumo (idProveedor,nombre,precio,vencimiento,stockInicial,stock,entradas,perdidas,estado,FechaRegistro)
-                    VALUES (?,?,?,?,?,?,?,?,2,?)";
+            $query = 'INSERT INTO insumo (idProveedor,nombre,precio,vencimiento,stockInicial,stock,entradas,perdidas,estado,FechaRegistro)
+                    VALUES (?,?,?,?,?,?,?,?,"inactivo",?)';
             $this->CNX->prepare($query)->execute(array(
                 $data->idProveedor,
                 $data->nombre,

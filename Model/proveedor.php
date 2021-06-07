@@ -33,8 +33,8 @@ class proveedor{
 
     public function registrar(proveedor $data){
         try {
-            $query = "INSERT INTO proveedor (nombreProveedor,direccion,telefono,email,estado,FechaRegistro)
-                    VALUES (?,?,?,?,1,?)";
+            $query = 'INSERT INTO proveedor (nombreProveedor,direccion,telefono,email,estado,FechaRegistro)
+                    VALUES (?,?,?,?,"inactivo",?)';
             $this->CNX->prepare($query)->execute(array(
                 $data->nombreProveedor,
                 $data->direccion,
@@ -68,6 +68,17 @@ class proveedor{
                 $data->email,
                 $data->estado,
                 $data->idProveedor));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function existe($email){
+        try {
+            $query = "SELECT * FROM proveedor where email=?";
+            $smt = $this->CNX->prepare($query);
+            $smt->execute(array($email));
+            return $smt->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
         }

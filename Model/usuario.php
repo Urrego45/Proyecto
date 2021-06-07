@@ -45,8 +45,8 @@ class usuario{
 
     public function registrar(usuario $data){
         try {
-            $query = "INSERT INTO usuario (idRol,nombres,apellidos,telefono,email,clave,estado)
-                    VALUES (?,?,?,?,?,?,2)";
+            $query = 'INSERT INTO usuario (idRol,nombres,apellidos,telefono,email,clave,estado)
+                    VALUES (?,?,?,?,?,?,"inactivo")';
             $this->CNX->prepare($query)->execute(array(
                 $data->idRol,
                 $data->nombres,

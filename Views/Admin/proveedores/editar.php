@@ -11,10 +11,10 @@
                         <div class="col m-3">
                         <input type="hidden" name="idU" value="<?php echo $alm->idProveedor; ?>">
 
-                            <div class="grupo" id="grupo_nombreP">
-                                <label for="nombreP">Nombre</label>
+                            <div class="grupo" id="grupo_nombre">
+                                <label for="nombre">Nombre</label>
                                 <div class="inputs">
-                                    <input type="text" name="nombreP" id="nombreP" class="f__input form-control m-1" placeholder="Nombre proveedor" value="<?php echo $alm->nombreProveedor; ?>">
+                                    <input type="text" name="nombre" id="nombre" class="f__input form-control m-1" placeholder="Nombre proveedor" value="<?php echo $alm->nombreProveedor; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="error">Nombre incorrecto. solo se permite letras (A-Z), numeros (0,9) y simbolos (_ - #)</p>
@@ -78,3 +78,5 @@
         </div>
     </div>
 </div>
+
+<script  src="http://localhost/Emi/assets/js/validacionProveedor.js"></script>
