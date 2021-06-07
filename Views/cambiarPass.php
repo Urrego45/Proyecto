@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <div class="card w-75 p-0 my-5 mx-auto">
     <div class="card-header bg-light p-5">
         <div class="container">
@@ -40,5 +38,3 @@
         </div>
     </div>
 </div>
-
-<?php session_destroy(); ?>

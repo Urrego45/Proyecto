@@ -104,7 +104,8 @@ class usuario{
         try {
             $query = "UPDATE usuario SET clave=?
             WHERE idUsuario=?";
-            $res = $this->CNX->prepare($query)->execute(array(
+
+            $this->CNX->prepare($query)->execute(array(
                 $data->pass,
                 $data->id));
         } catch (Exception $e) {

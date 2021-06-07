@@ -60,10 +60,9 @@ class controllUsuario{
     }
 
     public function cambiarPass(){
-
+        session_start();
         $alm = new usuario();
-        $alm->id = $_POST['idU'];
-        $alm->email = $_POST['email'];
+        $alm->id = $_SESSION['idUsuario'];
         
         
 

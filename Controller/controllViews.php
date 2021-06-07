@@ -258,6 +258,14 @@ class controllVistas{
         include_once $this->layout;
     }
 
+    public function enviarCorreoSub(){
+        $pageTitle = 'Cambiar contraseña';
+        $body = $this->viewPath.'\enviarCorreo.php';
+        
+
+        include_once $this->layoutSub;
+    }
+
     public function cambiarPass(){
         $pageTitle = 'Cambiar contraseña';
         $body = $this->viewPath.'\cambiarPass.php';

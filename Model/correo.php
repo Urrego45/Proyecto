@@ -35,8 +35,7 @@ try {
 
     $mail->send();
 
-    echo '<script> alert("Revisa tu correo para cambiar contraseña"); </script>';
-    header('location: http://localhost/Emi/index.php?l=cerrarSesion');
+    header('location: http://localhost/Emi/index.php?v=index');
 } catch (Exception $e) {
     echo "Error: {$mail->ErrorInfo}";
 }
