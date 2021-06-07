@@ -28,7 +28,7 @@
                                     <input type="text" name="precio" id="precio" class="f__input form-control m-1" placeholder="Precio" value="<?php echo $alm->precio; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero.</p>
+                                <p class="error">Ingrese un numero. numeros y puntos cada 3 digitos (123.456). 7 caracteres.</p>
                             </div>
 
                             <div class="grupo" id="grupo_fecha">
