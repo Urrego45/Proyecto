@@ -112,7 +112,16 @@ class usuario{
         }
     }
 
-
+    public function existe($email){
+        try {
+            $query = "SELECT * FROM usuario where email=?";
+            $smt = $this->CNX->prepare($query);
+            $smt->execute(array($email));
+            return $smt->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
 }
 

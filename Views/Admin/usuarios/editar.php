@@ -108,3 +108,5 @@
         </div>
     </div>
 </div>
+
+<script  src="http://localhost/Emi/assets/js/validacionUsuarioEditar.js"></script>

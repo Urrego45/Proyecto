@@ -57,7 +57,7 @@
                                     <input type="password" name="pass" id="pass" class="f__input form-control m-1" placeholder="123">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Contraseña incorrecta. la contraseña debe tener 8 a 14 caracteres.</p>
+                                <p class="error">Contraseña incorrecta. la contraseña debe tener 8 a 14 caracteres y letras y numeros.</p>
                             </div>
 
                             <div class="grupo" id="grupo_rol">
@@ -84,3 +84,6 @@
     </div>
 </div>
 
+
+
+<script  src="http://localhost/Emi/assets/js/validacionUsuario.js"></script>

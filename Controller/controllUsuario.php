@@ -22,9 +22,25 @@ class controllUsuario{
         $alm->clave = $_POST['pass'];
         $alm->idRol = $_POST['rol'];
         $alm->estado = $_POST['estado'];
+        
 
-        $alm->idUsuario > 0 ? $this->usuario->editar($alm) : $this->usuario->registrar($alm);
-        header("Location: index.php?v=listar");
+        if($alm->idUsuario > 0){
+            $this->usuario->editar($alm);
+            header("Location: index.php?v=listar");
+        }else{
+
+            if($this->usuario->existe($alm->email)){
+
+                echo '<h1>Hola</h1>';
+                header("Location: index.php?v=crear");
+    
+            }else{
+                $this->usuario->registrar($alm);
+                header("Location: index.php?v=listar");
+            }
+        }
+        
+        
     }
 
     public function enviarCorreo(){
