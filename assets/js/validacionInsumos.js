@@ -5,16 +5,20 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ]{1,40}$/,
-	direccion: /^[a-zA-Z0-9\s\#\-\_]{1,20}$/,
-	tel: /^\d{10}$/,
-	email: /^[a-zA-Z0-9.]+@+[a-zA-Z]+\.[a-zA-z]+$/
+	precio: /^\d{1,3}\.[\d]{3}$/,
+	stockI: /^\d{1,10}$/,
+	stockA: /^\d{1,10}$/,
+	entrada: /^\d{1,10}$/,
+	perdidas: /^\d{1,10}$/
 }
 
 const campos = { 
     nombre: false,
-	direccion: false,
-    tel: false,
-    email: false
+	precio: false,
+	stockI: false,
+	stockA: false,
+	entrada: false,
+	perdidas: false
 } 
 
 
@@ -25,17 +29,26 @@ const validarFormulario = (e) => {
             validarCampo(expresiones.nombre, e.target, 'nombre');
         break;
 
-        case "direccion":
-            validarCampo(expresiones.direccion, e.target, 'direccion');
+        case "precio":
+            validarCampo(expresiones.precio, e.target, 'precio');
         break;
 
-        case "tel":
-            validarCampo(expresiones.tel, e.target, 'tel');
+        case "stockI":
+            validarCampo(expresiones.stockI, e.target, 'stockI');
         break;
 
-        case "email":
-            validarCampo(expresiones.email, e.target, 'email');
+        case "stockA":
+            validarCampo(expresiones.stockA, e.target, 'stockA');
         break;
+
+        case "entrada":
+            validarCampo(expresiones.entrada, e.target, 'entrada');
+        break;
+
+        case "perdidas":
+            validarCampo(expresiones.perdidas, e.target, 'perdidas');
+        break;
+        
 
     }
 }
@@ -67,7 +80,7 @@ inputs.forEach((input)=>{
 
 formulario.addEventListener("submit", (e)=>{
     console.log(campos)
-    if(!(campos.nombre && campos.direccion && campos.tel && campos.email)){
+    if(!(campos.nombre && campos.precio && campos.stockI && campos.stockA && campos.entrada && campos.perdidas)){
         e.preventDefault()
     }
 });
