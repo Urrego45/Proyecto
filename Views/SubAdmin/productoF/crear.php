@@ -22,7 +22,7 @@
                             <div class="grupo" id="grupo_precio">
                                 <label for="precio">Precio</label>
                                 <div class="inputs">
-                                    <input type="number" name="precio" id="precio" class="f__input form-control m-1" placeholder="Precio">
+                                    <input type="text" name="precio" id="precio" class="f__input form-control m-1" placeholder="Precio">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="error">Ingrese un numero.</p>
@@ -45,7 +45,7 @@
                             <div id="contenedor">
 
                                 <div id="clonacion" class="row p-2">
-                                    <div class="grupo col" id="grupo_insumo">
+                                    <div class="grupo col" id="">
                                         
                                         <div class="inputs"> 
                                             <select name="insumo[]" id="insumo" class="form-control m-1">
@@ -59,7 +59,7 @@
                                         <p class="error">ingrese un insumo.</p>
                                     </div>
 
-                                    <div class="grupo col" id="grupo_entrada">
+                                    <div class="grupo col" id="">
                                         <div class="inputs">
                                             <input type="number" class="f__input form-control m-1" name="cantidadI[]" id="cantidadI" value="0">
                                             <i class="estado fas fa-times-circle"></i>
@@ -86,3 +86,4 @@
 </div>
 
 
+<script  src="http://localhost/Emi/assets/js/validacionProductosF.js"></script>

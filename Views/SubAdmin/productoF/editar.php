@@ -23,7 +23,7 @@
                             <div class="grupo" id="grupo_precio">
                                 <label for="precio">Precio</label>
                                 <div class="inputs">
-                                    <input type="number" name="precio" id="precio" class="f__input form-control m-1" placeholder="Precio" value="<?php echo $alm->precio; ?>">
+                                    <input type="text" name="precio" id="precio" class="f__input form-control m-1" placeholder="Precio" value="<?php echo $alm->precio; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="error">Ingrese un numero.</p>
@@ -83,3 +83,5 @@
         </div>
     </div>
 </div>
+
+<script  src="http://localhost/Emi/assets/js/validacionProductosF.js"></script>
