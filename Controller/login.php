@@ -19,7 +19,7 @@ class login{
         if(isset($_POST['validar'])){
             if(empty($_POST['email']) || empty($_POST['pass'])){
                 
-                header('location: index.php?v=index');
+                header('location: index.php?v=login');
             }else{
                 session_start();
                 $email = $_REQUEST['email'];
@@ -58,12 +58,14 @@ class login{
                 }
             }
         }else{
-
+            header('location: index.php?v=login');
         }
     }
 
+
     public function cerrarSesion(){
         session_start();
+        
         session_destroy();
         header('location: index.php?v=index');
     }
