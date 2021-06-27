@@ -21,7 +21,7 @@
                                 <?php foreach($this->productof->listarInsumoPF(intval($alm->idProductoFinal)) as $ac): ?>
                                     <tr>
                                         <td><?php echo $ac->idInsuProdF; ?></td>
-                                        <td><?php echo $ac->idInsumo; ?></td>
+                                        <td><?php echo $ac->nombre; ?></td>
                                         <td><?php echo $ac->cantidad; ?></td>
                                     </tr>
                                 <?php endforeach; ?>

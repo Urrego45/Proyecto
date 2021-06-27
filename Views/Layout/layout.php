@@ -70,6 +70,10 @@
                     <a href="?v=listarPr" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Productos Finales</a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="https://youtu.be/qXeSRRfAYGU" class="nav-link px-2 linkDark3Hover rounded bg-darck2 text-white" onclick="link(this)">  Ayuda en linea</a>
+                </li>
+
 
             </ul>
 

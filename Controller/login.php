@@ -54,6 +54,9 @@ class login{
                             
                         header('location: index.php?v=inicioS');
             
+                    }else{
+                        header('location: index.php?v=login');
+
                     }
                 }
             }

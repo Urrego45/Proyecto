@@ -35,7 +35,7 @@
                                     <input type="number" name="tel" id="tel" class="f__input form-control m-1" placeholder="1234567890">
                                     <i class="estado fas fa-times-circle"></i> 
                                 </div>
-                                <p class="error">Teléfono incorrecto. solo se permiten numeros y tener 10 caracteres.</p>
+                                <p class="error">Teléfono incorrecto. solo se permiten números y tener 10 caracteres.</p>
                             </div>
 
                             <div class="grupo" id="grupo_email">
@@ -44,7 +44,7 @@
                                     <input type="email" name="email" id="email" class="f__input form-control m-1" placeholder="Ejemplo@gmail.com">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Correo incorrecto. solo se permiten letras (a-z), numeros y signos de puntuacion (.). </p>
+                                <p class="error">Correo incorrecto. solo se permiten letras (a-z), números y signos de puntuación (.). </p>
                             </div>
 
                         </div>
@@ -57,7 +57,7 @@
                                     <input type="password" name="pass" id="pass" class="f__input form-control m-1" placeholder="123">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Contraseña incorrecta. la contraseña debe tener 8 a 14 caracteres y letras y numeros.</p>
+                                <p class="error">Correo incorrecto. solo se permiten letras (a-z), números y signos de puntuación (.)</p>
                             </div>
 
                             <div class="grupo" id="grupo_rol">

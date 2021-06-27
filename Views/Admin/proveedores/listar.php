@@ -1,17 +1,17 @@
 <div class="card w-75 p-0 my-5 mx-auto">
-    <div class="card-header bg-light p-5">
-        <table>
+        <table border="1" cellspacing="5" cellpadding="5">
             <thead>
                 <tr >
-                    <th colspan="9"> <center> <a href="?v=crearP" class="btn btn-primary" value="">Crear proveedor </a></center> </th>
+                    <th colspan="9"> <center> <a href="?v=crearP" class="btn btn-primary" value="">Créar proveedor </a></center> </th>
                 </tr>
                 <tr>
-                    <th>Id proveedor</th>
-                    <th>Nombre proveedor</th>
+                    <th>proveedor</th>
+                    <th>Proveedor</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
                     <th>Email</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +30,5 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
 </div>
 

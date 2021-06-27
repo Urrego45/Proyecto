@@ -1,12 +1,11 @@
 <div class="card w-75 p-0 my-5 mx-auto">
-    <div class="card-header bg-light p-5">
-        <table>
+        <table border="1" cellspacing="5" cellpadding="5">
             <thead>
                 <tr >
                     <th colspan="9"> <center> <a href="?v=crearPr" class="btn btn-primary" value="">Nuevo Producto </a></center> </th>
                 </tr>
                 <tr>
-                    <th>Id Producto</th>
+                    <th>Producto</th>
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Ventas</th>
@@ -29,13 +28,12 @@
 
                     </td>
                     <td>
-                    <a href="?v=detalles&id=<?php echo $ac->idProductoFinal; ?>" class="btn btn-block btn-danger">detalles</a>
+                    <a href="?v=detalles&id=<?php echo $ac->idProductoFinal; ?>" class="btn btn-block btn-danger">Detalles</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
 </div>
 
 

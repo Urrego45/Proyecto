@@ -25,7 +25,7 @@
                                     <input type="text" name="precio" id="precio" class="f__input form-control m-1" placeholder="Precio">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero. numeros y puntos cada 3 digitos (123.456). 7 caracteres.</p>
+                                <p class="error">Ingrese un número. números y puntos cada 3 digitos (123.456). 7 caracteres.</p>
                             </div>
 
                             <div class="grupo" id="grupo_fecha">
@@ -43,7 +43,7 @@
                                     <input type="number" name="stockI" id="stockI" class="f__input form-control m-1" placeholder="Stock inicial">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero.</p>
+                                <p class="error">Ingrese un número.</p>
                             </div>
 
                             <div class="grupo" id="grupo_stockA">
@@ -52,7 +52,7 @@
                                     <input type="number" name="stockA" id="stockA" class="f__input form-control m-1" placeholder="Stock actual">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero.</p>
+                                <p class="error">Ingrese un número.</p>
                             </div>
 
                         
@@ -65,7 +65,7 @@
                                     <input type="number" name="entrada" id="entrada" class="f__input form-control m-1" placeholder="Entradas de insumos">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero.</p>
+                                <p class="error">Ingrese un número.</p>
                             </div>
 
                             <div class="grupo" id="grupo_perdidas">
@@ -74,7 +74,7 @@
                                     <input type="number" name="perdidas" id="perdidas" class="f__input form-control m-1" placeholder="Pérdidas de insumos">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero.</p>
+                                <p class="error">Ingrese un número.</p>
                             </div>
 
 

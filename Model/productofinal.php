@@ -102,7 +102,7 @@ class productofinal{
     }
     public function listarInsumoPF($id){
         try {
-            $query = 'SELECT * FROM insuprodf where idProductoFinal=?';
+            $query = 'SELECT insumo.nombre, insuprodf.cantidad, insuprodf.idInsuProdF FROM insumo INNER JOIN insuprodf ON insumo.idInsumo = insuprodf.idInsumo WHERE insuprodf.idProductoFinal = ?';
             $smt = $this->CNX->prepare($query);
             $smt->execute(array($id));
             return $smt->fetchAll(PDO::FETCH_OBJ);

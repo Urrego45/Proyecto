@@ -25,7 +25,7 @@
                                     <input type="text" name="precio" id="precio" class="f__input form-control m-1" placeholder="Precio">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero. numeros y puntos cada 3 digitos (123.456). 7 caracteres.</p>
+                                <p class="error">Ingrese un número. números y puntos cada 3 digitos (123.456). 7 caracteres.</p>
                             </div>
 
                             <div class="grupo" id="grupo_ventas">
@@ -34,11 +34,11 @@
                                     <input type="number" name="ventas" id="ventas" class="f__input form-control m-1" placeholder="ventas">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Ingrese un numero.</p>
+                                <p class="error">Ingrese un número.</p>
                             </div>
 
 
-                            <h1 for="insumo">Con que insumos esta echo este producto?</h1>
+                            <h1 for="insumo">¿Con que insumos esta hecho este producto?</h1>
                             <br>
                             <input type="button" value="+" class="btn btn-primary" id="agregar"> 
 
@@ -63,7 +63,7 @@
                                             <input type="number" class="f__input form-control m-1" name="cantidadI[]" id="cantidadI" value="0">
                                             <i class="estado fas fa-times-circle"></i>
                                         </div>
-                                        <p class="error">Solo numeros mayores a 0</p>
+                                        <p class="error">Solo números mayores a 0</p>
                                     </div>
 
                                     <div class="grupo col" id="grupo_entrada">

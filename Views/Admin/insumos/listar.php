@@ -1,24 +1,23 @@
 <div class="card w-75 p-0 my-5 mx-auto">
-    <div class="card-header bg-light p-5">
         
-        <table>
+        <table class="" border="1" cellspacing="5" cellpadding="5">
             <thead>
                 <tr >
                     <th colspan="6"> <center> <a href="?v=crearI" class="btn btn-primary" value="">Nuevo insumo </a></center> </th>
-                    <th colspan="3">
+                    <th colspan="5">
                         <input type="button" value="Ingresar mas insumos" class="btn btn-block btn-primary" id="aumentarInsumo">
                     </th>
                 </tr>
                 <tr>
-                    <th>Id Insumo</th>
-                    <th>Id Proveedor</th>
-                    <th>Nomnbre</th>
+                    <th>Insumo</th>
+                    <th>Proveedor</th>
+                    <th>Nombre</th>
                     <th>Precio</th>
                     <th>Vencimiento</th>
                     <th>Stock inicial</th>
                     <th>Stock</th>
                     <th>Entradas</th>
-                    <th>Perdidads</th>
+                    <th>Pérdidas</th>
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
@@ -29,7 +28,7 @@
                     <td><?php echo $ac->idInsumo; ?></td>
                     <td><?php echo $ac->idProveedor; ?></td>
                     <td><?php echo $ac->nombre; ?></td>
-                    <td>$ <?php echo $ac->precio; ?></td>
+                    <td>$<?php echo $ac->precio; ?></td>
                     <td><?php echo $ac->vencimiento; ?></td>
                     <td><?php echo $ac->stockInicial; ?></td>
                     <td><?php echo $ac->stock; ?></td>
@@ -46,12 +45,10 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
 </div>
 
 
-<!-- <script  src="http://localhost/Emi/assets/js/aumentarInsumo.js"></script>
- --><script>
+<script>
 const nuevoInsumo = document.getElementById("aumentarInsumo")
 
 nuevoInsumo.addEventListener('click', e =>{

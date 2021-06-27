@@ -12,30 +12,30 @@
                         <input type="hidden" name="idU" value="<?php echo $alm->idProveedor; ?>">
 
                             <div class="grupo" id="grupo_nombre">
-                                <label for="nombre">Nombre</label>
+                                <label for="nombre">Nombre proveedor</label>
                                 <div class="inputs">
                                     <input type="text" name="nombre" id="nombre" class="f__input form-control m-1" placeholder="Nombre proveedor" value="<?php echo $alm->nombreProveedor; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Nombre incorrecto. solo se permite letras (A-Z), numeros (0,9) y simbolos (_ - #)</p>
+                                <p class="error">Nombre incorrecto. solo se permite letras (A-Z), números (0,9) y simbolos (_ - #)</p>
                             </div>
 
                             <div class="grupo" id="grupo_direccion">
                                 <label for="direccion">Dirección</label>
                                 <div class="inputs">
-                                    <input type="text" name="direccion" id="direccion" class="f__input form-control m-1" placeholder="Direccion" value="<?php echo $alm->direccion; ?>">
+                                    <input type="text" name="direccion" id="direccion" class="f__input form-control m-1" placeholder="Dirección" value="<?php echo $alm->direccion; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Dirección incorrecta. solo se permite letras (A-Z), numeros (0,9) y simbolos (_ - #)</p>
+                                <p class="error">Dirección incorrecta. solo se permite letras (A-Z), números (0,9) y simbolos (_ - #)</p>
                             </div>
 
                             <div class="grupo" id="grupo_tel">
                                 <label for="tel">Teléfono</label>
                                 <div class="inputs">
-                                    <input type="number" name="tel" id="tel" class="f__input form-control m-1" placeholder="Telefono" value="<?php echo $alm->telefono; ?>">
+                                    <input type="number" name="tel" id="tel" class="f__input form-control m-1" placeholder="Teléfono" value="<?php echo $alm->telefono; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Teléfono incorrecto. solo se permiten numeros y tener 10 caracteres.</p>
+                                <p class="error">Teléfono incorrecto. solo se permiten números y tener 10 caracteres.</p>
                             </div>
 
                             <div class="grupo" id="grupo_email"> 
@@ -44,7 +44,7 @@
                                     <input type="email" name="email" id="email" class="f__input form-control m-1" placeholder="Email" value="<?php echo $alm->email; ?>">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Correo incorrecto. solo se permiten letras (a-z), numeros y signos de puntuacion (.). </p>
+                                <p class="error">Correo incorrecto. solo se permiten letras (a-z), números y signos de puntuación (.). </p>
                             </div>
 
                             <div class="grupo" id="grupo_estado"> 

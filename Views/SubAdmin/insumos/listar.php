@@ -3,7 +3,10 @@
         <table>
             <thead>
                 <tr >
-                    <th colspan="9"> <center> <a href="?v=crearIS" class="btn btn-primary" value="">Nuevo insumo </a></center> </th>
+                    <th colspan="6"> <center> <a href="?v=crearIS" class="btn btn-primary" value="">Nuevo insumo </a></center> </th>
+                    <th colspan="3">
+                        <input type="button" value="Ingresar mas insumos" class="btn btn-block btn-primary" id="aumentarInsumo">
+                    </th>
                 </tr>
                 <tr>
                     <th>Id Insumo</th>

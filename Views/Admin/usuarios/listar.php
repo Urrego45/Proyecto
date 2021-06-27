@@ -1,18 +1,18 @@
 <div class="card w-75 p-0 my-5 mx-auto">
-    <div class="card-header bg-light p-5">
-        <table id="tabla" name="tabla" class="">
+        <table id="tabla" name="tabla" border="1" cellspacing="5" cellpadding="5">
             <thead>
                 <tr >
-                    <th colspan="9"> <center> <a href="?v=crear" class="btn btn-primary" value="">Crear nuevo usuario </a></center> </th>
+                    <th colspan="9"> <center> <a href="?v=crear" class="btn btn-primary" value="">Créar usuario </a></center> </th>
                 </tr>
                 <tr>
-                    <th>Id Usuario</th>
-                    <th>Id rol</th>
+                    <th>Usuario</th>
+                    <th>Rol</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th>Telefono</th>
+                    <th>Teléfono</th>
                     <th>Email</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,6 +32,5 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
 </div>
 

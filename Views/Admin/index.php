@@ -14,13 +14,31 @@
                 <input type="submit" class="btn btn-danger m-1" name="iproductofinal" value="Informe de insumo producto final">
             </div>
             <div>
-                <select name="tiempo" id="" class="form-control m-1">
+                <select name="tiempo" id="tiempo" class="form-control m-1">
                     <option disabled selected value="0">Escoge el tiempo del informe</option>
                     <option value="1">día</option>
                     <option value="2">Semana</option>
                     <option value="3">Mes</option>
                 </select>
             </div>
+
+            <input type="button" value="Error" id="error">
         </form>
     </div>
 </div>
+
+<script>
+const error = document.getElementById("error")
+
+error.addEventListener('click', e =>{
+    Swal.fire({
+        icon: 'warning',
+        title: 'Error. escoja Día/Semana/Mes'
+    }).then((result) => {
+        if (result.value) {
+            document.insumo.submit();
+        }
+        return false;
+  })
+})
+</script>

@@ -20,7 +20,7 @@
                                 <input type="email" name="email" id="email" class="f__input form-control" placeholder="Correo@gmail.com">
                                 <i class="estado fas fa-times-circle"></i>
                             </div>
-                            <p class="error">Correo incorrecto. solo se permiten letras (a-z), numeros y signos de puntuacion (.)</p>
+                            <p class="error">Correo incorrecto. solo se permiten letras (a-z), números y signos de puntuación (.).</p>
                         </div>
 
                         <div class="grupo form-group" id="grupo_pass">
@@ -30,10 +30,6 @@
                                 <i class="estado fas fa-times-circle"></i>
                             </div>
                             <p class="error">Contraseña incorrecta. la contraseña debe tener 8 a 14 caracteres.</p>
-                        </div>
-
-                        <div class="mensageForm" id="mensageForm">
-                            <p><i class=" fas fa-exclamation-triangle"></i> <b>Error: </b>Llene bien el formulario cachaco ijueputa.</p>
                         </div>
                         <br>
 

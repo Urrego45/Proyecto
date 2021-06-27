@@ -16,7 +16,7 @@
                                     <input type="text" name="nombre" id="nombre" class="f__input form-control m-1" placeholder="Nombre proveedor">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Nombre incorrecto. solo se permite letras (A-Z), numeros (0,9) y simbolos (_ - #).</p>
+                                <p class="error">Nombre incorrecto. solo se permite letras (A-Z), números (0,9) y símbolos (_ - #).</p>
                             </div>
 
                             <div class="grupo" id="grupo_direccion">
@@ -25,7 +25,7 @@
                                     <input type="text" name="direccion" id="direccion" class="f__input form-control m-1" placeholder="Dirección">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Dirección incorrecta. solo se permite letras (A-Z), numeros (0,9) y simbolos (_ - #).</p>
+                                <p class="error">Dirección incorrecta. solo se permite letras (A-Z), números (0,9) y símbolos (_ - #).</p>
                             </div>
 
                             <div class="grupo" id="grupo_tel">
@@ -34,7 +34,7 @@
                                     <input type="number" name="tel" id="tel" class="f__input form-control m-1" placeholder="Teléfono">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Teléfono incorrecto. solo se permiten numeros y tener 10 caracteres.</p>
+                                <p class="error">Teléfono incorrecto. solo se permiten números y tener 10 caracteres.</p>
                             </div>
 
                             <div class="grupo" id="grupo_email"> 
@@ -43,7 +43,7 @@
                                     <input type="email" name="email" id="email" class="f__input form-control m-1" placeholder="Email">
                                     <i class="estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="error">Correo incorrecto. solo se permiten letras (a-z), numeros y signos de puntuacion (.). </p>
+                                <p class="error">Correo incorrecto. solo se permiten letras (a-z), números y signos de puntuación (.). </p>
                             </div>
                         </div>
                     </div>
