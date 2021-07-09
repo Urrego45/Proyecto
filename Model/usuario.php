@@ -13,6 +13,8 @@ class usuario{
     public $clave; 
     public $estado;
 
+    
+
     public function __construct(){
         try{
             $this->CNX = conexion::conectar();
@@ -53,7 +55,7 @@ class usuario{
                 $data->apellidos,
                 $data->telefono,
                 $data->email,
-                $data->clave));
+                $data->pass_cifrado));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -106,7 +108,7 @@ class usuario{
             WHERE idUsuario=?";
 
             $this->CNX->prepare($query)->execute(array(
-                $data->pass,
+                $data->pass_cifrado,
                 $data->id));
         } catch (Exception $e) {
             die($e->getMessage());

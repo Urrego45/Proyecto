@@ -39,4 +39,4 @@
     </div>
 </div>
 
-<script src="http://localhost/Emi/assets/js/validacionCambiarPass.js"></script>
+<script src="http://localhost/Emi/assets/js/validacionCambioP.js"></script>

@@ -25,16 +25,15 @@ class login{
                 $pass = $_REQUEST['pass'];
 
                 $query = 'SELECT idUsuario, idRol, nombres, clave, estado FROM usuario
-                        WHERE email = :email AND clave = :clave AND estado = "activo"';
+                        WHERE email = :email AND estado = "activo"';
                 
                 $smt = $this->CNX->prepare($query);
                 $smt->bindValue(":email",$email);
-                $smt->bindValue(":clave",$pass);
 
                 $smt->execute();
 
                 $res = $smt->fetch(PDO::FETCH_ASSOC);
-                
+
                 if(empty($res)){
                     header('location: index.php?v=login');
                 }else{

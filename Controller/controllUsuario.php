@@ -13,16 +13,18 @@ class controllUsuario{
     }
 
     public function crear(){
+        $clave = $_POST['pass'];
+        
         $alm = new usuario();
         $alm->idUsuario = $_POST['idU'];
         $alm->nombres = $_POST['nombre'];
         $alm->apellidos = $_POST['apellido'];
         $alm->telefono = $_POST['tel'];
         $alm->email = $_POST['email'];
-        $alm->clave = $_POST['pass'];
+        /* $alm->clave = $_POST['pass']; */
+        $alm->pass_cifrado = password_hash($clave, PASSWORD_DEFAULT);
         $alm->idRol = $_POST['rol'];
         $alm->estado = $_POST['estado'];
-        
 
         if($alm->idUsuario > 0){
             $this->usuario->editar($alm);
