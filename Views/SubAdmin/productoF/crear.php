@@ -7,9 +7,7 @@
                 </div>
                 <form action="?pf=crear" method="post" id="formulario">
                     <div class="row">
-                        <div class="col m-3">
-                            <input type="hidden" name="ad">
-                            
+                        <div class="col m-3">                            
                             <div class="grupo" id="grupo_nombre">
                                 <label for="nombre">Nombre</label>
                                 <div class="inputs">

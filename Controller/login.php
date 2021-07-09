@@ -18,7 +18,6 @@ class login{
         
         if(isset($_POST['validar'])){
             if(empty($_POST['email']) || empty($_POST['pass'])){
-                
                 header('location: index.php?v=login');
             }else{
                 session_start();
@@ -35,7 +34,7 @@ class login{
                 $smt->execute();
 
                 $res = $smt->fetch(PDO::FETCH_ASSOC);
-
+                
                 if(empty($res)){
                     header('location: index.php?v=login');
                 }else{

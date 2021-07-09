@@ -1,27 +1,27 @@
-const formulario =  document.getElementById("formulario");
+const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll('#formulario input');
 
 
 
 const expresiones = {
-	pass: /^[a-zA-Z0-9]{8,14}$/
+	pass1: /^[a-zA-Z0-9]{8,14}$/,
+	pass2: /^[a-zA-Z0-9]{8,14}$/
 }
 
-const campos = { 
-    pass: false
+const campos = {
+    pass1: false,
+    pass2: false
 } 
-
-
 
 const validarFormulario = (e) => {
     switch (e.target.name){
 
         case "pass1":
-            validarCampo(expresiones.pass, e.target, 'pass1');
+            validarCampo(expresiones.pass1, e.target, 'pass1');
         break;
 
         case "pass2":
-            validarCampo(expresiones.pass, e.target, 'pass2');
+            validarCampo(expresiones.pass2, e.target, 'pass2');
         break;
 
     }
@@ -51,10 +51,9 @@ inputs.forEach((input)=>{
 });
 
 
-
 formulario.addEventListener("submit", (e)=>{
     console.log(campos)
-    if(!(campos.pass)){
+    if(!(campos.pass1 && campos.pass2)){
         e.preventDefault()
     }
 });

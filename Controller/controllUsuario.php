@@ -40,7 +40,6 @@ class controllUsuario{
             }
         }
         
-        
     }
 
     public function enviarCorreo(){

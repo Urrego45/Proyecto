@@ -21,8 +21,6 @@
                     <option value="3">Mes</option>
                 </select>
             </div>
-
-            <input type="button" value="Error" id="error">
         </form>
     </div>
 </div>

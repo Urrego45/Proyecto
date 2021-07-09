@@ -6,9 +6,6 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        En desarrollo.
-                    <br>
-                    <div>
                         <table border="2">
                             <thead>
                                 <tr>

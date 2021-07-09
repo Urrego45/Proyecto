@@ -11,7 +11,7 @@
                             <input type="hidden" name="idU" value="<?php echo $_SESSION['idUsuario']; ?>">
 
                             <div class="grupo" id="grupo_pass1">
-                                <label for="pass">Contraseña</label>
+                                <label for="pass1">Contraseña</label>
                                 <div class="inputs">
                                     <input type="password" name="pass1" id="pass1" class="f__input form-control m-1" placeholder="123">
                                     <i class="estado fas fa-times-circle"></i>
@@ -20,7 +20,7 @@
                             </div>
 
                             <div class="grupo" id="grupo_pass2">
-                                <label for="pass">Contraseña</label>
+                                <label for="pass2">Contraseña</label>
                                 <div class="inputs">
                                     <input type="password" name="pass2" id="pass2" class="f__input form-control m-1" placeholder="123">
                                     <i class="estado fas fa-times-circle"></i>
